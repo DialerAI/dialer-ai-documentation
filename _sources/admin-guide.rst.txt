@@ -1,0 +1,17 @@
+.. _admin_guide:
+
+===========
+Admin Guide
+===========
+
+Contents:
+
+.. toctree::
+    :maxdepth: 1
+
+    ./admin-guide/configuration.rst
+    ./admin-guide/SMS-config.rst
+    ./admin-guide/billing-module.rst
+    ./admin-guide/dialer-settings.rst
+    ./admin-guide/add-user.rst
+    ./admin-guide/admin-panel
