@@ -36,7 +36,7 @@
               href="genindex.html"/>
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="DialerAI 4.8.9 documentation" href="index.html"/>
-        <link rel="next" title="Configuration" href="admin-guide/configuration.html"/>
+        <link rel="next" title="SMS Configuration" href="admin-guide/SMS-config.html"/>
         <link rel="prev" title="Dashboard" href="user-guide/dashboard.html"/> 
 
   
@@ -96,7 +96,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="user-guide.html">User Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="user-guide/overview.html">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="user-guide/quickstart.html">Quick Start</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="user-guide/quickstart.html#create-phonebook">Create Phonebook</a></li>
 <li class="toctree-l3"><a class="reference internal" href="user-guide/quickstart.html#add-contacts">Add Contacts</a></li>
@@ -177,10 +176,6 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Admin Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="admin-guide/configuration.html">Configuration</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="admin-guide/configuration.html#id1">Configuration Overview</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="admin-guide/SMS-config.html">SMS Configuration</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="admin-guide/SMS-config.html#configuration">Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="admin-guide/SMS-config.html#messages">Messages</a></li>
@@ -310,10 +305,21 @@
 
     <div class="section" id="admin-guide">
 <span id="id1"></span><h1>Admin Guide<a class="headerlink" href="#admin-guide" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
+<p>When a DialerAI system is first commissioned, much of this work will be done as part of the commissioning process by the DialerAI team. However, it may be necessary for DialerAI admin to add new gateways or make other changes to the system.</p>
+<p>The commissioning process will include:</p>
+<ul class="simple">
+<li><strong>Freeswitch/VoIP configuration</strong> - setting up the VoIP gateways (carriers)</li>
+<li><strong>Text to speech</strong>  - configuring TTS engines</li>
+<li><strong>SMS configuration</strong> - settings up the SMS providers</li>
+</ul>
+<p>Tasks which will be performed by DialerAI admin, with our training, will include:</p>
+<ul class="simple">
+<li>Adding new users</li>
+<li>Creating Dialer settings, which control the resources any one user can consume</li>
+</ul>
+<p><strong>Admin Guide Contents:</strong></p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="admin-guide/configuration.html">Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="admin-guide/SMS-config.html">SMS Configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="admin-guide/billing-module.html">SMS &amp; Call Billing Module</a></li>
 <li class="toctree-l1"><a class="reference internal" href="admin-guide/dialer-settings.html">Dialer Settings</a></li>
@@ -334,7 +340,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="admin-guide/configuration.html" class="btn btn-neutral float-right" title="Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="admin-guide/SMS-config.html" class="btn btn-neutral float-right" title="SMS Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="user-guide/dashboard.html" class="btn btn-neutral" title="Dashboard" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

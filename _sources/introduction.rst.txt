@@ -25,12 +25,6 @@ via the API's.
 
 .. _`Freeswitch`: http://www.freeswitch.org/
 
-
-.. contents::
-    :local:
-    :depth: 1
-
-
 .. _dialerai_overview:
 
 Overview

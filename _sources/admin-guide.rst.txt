@@ -4,12 +4,25 @@
 Admin Guide
 ===========
 
-Contents:
+When a DialerAI system is first commissioned, much of this work will be done as part of the commissioning process by the DialerAI team. However, it may be necessary for DialerAI admin to add new gateways or make other changes to the system.
+
+The commissioning process will include:
+
+* **Freeswitch/VoIP configuration** - setting up the VoIP gateways (carriers)
+* **Text to speech**  - configuring TTS engines
+* **SMS configuration** - settings up the SMS providers
+
+Tasks which will be performed by DialerAI admin, with our training, will include:
+
+* Adding new users
+* Creating Dialer settings, which control the resources any one user can consume
+
+
+**Admin Guide Contents:**
 
 .. toctree::
     :maxdepth: 1
 
-    ./admin-guide/configuration.rst
     ./admin-guide/SMS-config.rst
     ./admin-guide/billing-module.rst
     ./admin-guide/dialer-settings.rst
