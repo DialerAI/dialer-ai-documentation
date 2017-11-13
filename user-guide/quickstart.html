@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Quick Start &mdash; DialerAI 4.9.2 documentation</title>
+  <title>Quick Start &mdash; DialerAI 4.9.3 documentation</title>
   
 
   
@@ -35,7 +35,7 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="DialerAI 4.9.2 documentation" href="../index.html"/>
+    <link rel="top" title="DialerAI 4.9.3 documentation" href="../index.html"/>
         <link rel="up" title="User Guide" href="../user-guide.html"/>
         <link rel="next" title="Customer Panel" href="customer-panel.html"/>
         <link rel="prev" title="User Guide" href="../user-guide.html"/> 
@@ -324,10 +324,12 @@
 <span id="id2"></span><h2>Create Phonebook<a class="headerlink" href="#create-phonebook" title="Permalink to this headline">¶</a></h2>
 <p>The phonebook is where lists of subscribers are grouped. Click Customer Panel on the top menu in the Admin Dashboard, then click Phonebook, and add a new phonebook.</p>
 <p>Create a new phonebook called, for the purposes of the exercise, PB1, and give it a description.</p>
+<img alt="../_images/quickstart_add_phonebook.png" src="../_images/quickstart_add_phonebook.png" />
 </div>
 <div class="section" id="add-contacts">
 <span id="id3"></span><h2>Add Contacts<a class="headerlink" href="#add-contacts" title="Permalink to this headline">¶</a></h2>
 <p>Click contact, and add a new contact. As a minimum add a phone number to call in the Contact field, and for the purposes of this demonstration, enter your own telephone number in full international format including the leading +, for instance +12024648397 in the USA or +441179114474 in the UK</p>
+<img alt="../_images/quickstart_add_contact.png" src="../_images/quickstart_add_contact.png" />
 <p>Repeat as necessary until you have your test numbers added.</p>
 <p>It is possible to upload numbers from a text file. The methodology is covered later in this guide.</p>
 </div>
@@ -336,14 +338,17 @@
 <p>Next we are going to configure the survey that will be executed when DialerAI calls your phone and you answer. Click Modules, Survey, then click add. As is traditional with first steps, we will call this survey “Hello World”.</p>
 <p>The aim is that DialerAI will call you, and when you answer, DialerAI will broadcast “Hello World” to you using the text to speech engine in Freeswitch.</p>
 <p>Click “Add Section” and select “Play Message”, enter “Hello World” in the section title. This is the speech that will be read out by the TTS engine. It can be edited later. When done, click save.</p>
+<img alt="../_images/quickstart_add_playaudio_node.png" src="../_images/quickstart_add_playaudio_node.png" />
 <p>Best practice is that we should explicitly hangup, and mark the survey as complete, so click “Add Section” and select Hangup as the node type. Type “Goodbye” in the section title, and tick “Survey complete”</p>
 <p>Next, set up the node branching. On the play message panel, click the branch icon, and select “Goodbye” as the next destination.</p>
+<img alt="../_images/quickstart_add_hangup_node.png" src="../_images/quickstart_add_hangup_node.png" />
 <p>Finally, click Close Survey, and move on to configuring the campaign.</p>
 </div>
 <div class="section" id="configure-campaign">
 <span id="id5"></span><h2>Configure Campaign<a class="headerlink" href="#configure-campaign" title="Permalink to this headline">¶</a></h2>
 <p>We now have all the components to create and run our campaign, so click campaign, and click add.</p>
 <p>Give the Campaign a name, say “CPN Hello World”, optionally, a description, set a caller ID to pass the called party,  select the A-Leg Gateway you configured earlier, the application, Hello World, and highlight the phonebook PB1, and submit. You will be returned to the list of campaigns.</p>
+<img alt="../_images/quickstart_add_campaign.png" src="../_images/quickstart_add_campaign.png" />
 </div>
 <div class="section" id="start-the-campaign">
 <span id="id6"></span><h2>Start The Campaign<a class="headerlink" href="#start-the-campaign" title="Permalink to this headline">¶</a></h2>
@@ -400,7 +405,7 @@
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'4.9.2',
+            VERSION:'4.9.3',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
