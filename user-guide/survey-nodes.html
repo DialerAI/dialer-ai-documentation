@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Survey &amp; IVR Configuration &mdash; DialerAI 4.9.3 documentation</title>
+  <title>Survey &amp; IVR Configuration &mdash; DialerAI 5.2.23 documentation</title>
   
 
   
@@ -25,27 +25,19 @@
   
 
   
-  
     <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="DialerAI 4.9.3 documentation" href="../index.html"/>
-        <link rel="up" title="User Guide" href="../user-guide.html"/>
-        <link rel="next" title="Contacts" href="contacts.html"/>
-        <link rel="prev" title="Customer Panel" href="customer-panel.html"/> 
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Contacts" href="contacts.html" />
+    <link rel="prev" title="Customer Panel" href="customer-panel.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -62,7 +54,7 @@
 
           
             
-            <img src="../_static/logo_dialerAI_negative.svg" class="logo" />
+            <img src="../_static/logo_dialerAI_negative.svg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -253,7 +245,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">DialerAI</a>
@@ -261,9 +253,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -448,22 +441,22 @@ Text example:</p>
 <img alt="../_images/node_call_transfer.png" src="../_images/node_call_transfer.png" />
 <p>In order to support screen-pops and deliver other data, there has been some data included in the SIP message</p>
 <p>By default the following data is included in the SIP header on call transfer:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">P</span><span class="o">-</span><span class="n">CallRequest</span><span class="o">-</span><span class="n">ID</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">Call</span> <span class="n">request</span> <span class="n">ID</span>
-<span class="n">P</span><span class="o">-</span><span class="n">Contact</span><span class="o">-</span><span class="n">ID</span> <span class="ow">is</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">Contact</span> <span class="n">ID</span><span class="o">.</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="o">-</span><span class="n">CallRequest</span><span class="o">-</span><span class="n">ID</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">Call</span> <span class="n">request</span> <span class="n">ID</span>
+<span class="n">P</span><span class="o">-</span><span class="n">Contact</span><span class="o">-</span><span class="n">ID</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">Contact</span> <span class="n">ID</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>It is envisaged that these ID numbers can be used to do database look-ups on the DialerAI database.</p>
 <p>Furthermore, there is a optional SIP header that can be added.</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">P</span><span class="o">-</span><span class="n">Contact</span><span class="o">-</span><span class="n">Transfer</span><span class="o">-</span><span class="n">Ref</span><span class="p">:</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="o">-</span><span class="n">Contact</span><span class="o">-</span><span class="n">Transfer</span><span class="o">-</span><span class="n">Ref</span><span class="p">:</span>
 </pre></div>
 </div>
 <p>This can be added against the Contact in the “Additional Parmeters (JSON)” field.
 Simply add the “transfer_ref” keyword and string to send in the SIP message as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;transfer_ref&quot;</span><span class="p">:</span> <span class="s2">&quot;My-Unique-Ref-Number&quot;</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s2">&quot;transfer_ref&quot;</span><span class="p">:</span> <span class="s2">&quot;My-Unique-Ref-Number&quot;</span><span class="p">}</span>
 </pre></div>
 </div>
 <p>In the SIP headers, you will see:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">P</span><span class="o">-</span><span class="n">CallRequest</span><span class="o">-</span><span class="n">ID</span><span class="p">:</span> <span class="mi">3</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">P</span><span class="o">-</span><span class="n">CallRequest</span><span class="o">-</span><span class="n">ID</span><span class="p">:</span> <span class="mi">3</span>
 <span class="n">P</span><span class="o">-</span><span class="n">Contact</span><span class="o">-</span><span class="n">ID</span><span class="p">:</span> <span class="mi">1</span>
 <span class="n">P</span><span class="o">-</span><span class="n">Contact</span><span class="o">-</span><span class="n">Transfer</span><span class="o">-</span><span class="n">Ref</span><span class="p">:</span> <span class="n">My</span><span class="o">-</span><span class="n">Unique</span><span class="o">-</span><span class="n">Ref</span><span class="o">-</span><span class="n">Number</span>
 </pre></div>
@@ -482,7 +475,7 @@ Simply add the “transfer_ref” keyword and string to send in the SIP message 
 </div></blockquote>
 <p>The API <em>MUST</em> implement the GET method on the given URL and return a valid
 JSON document with the field “api_result”, eg:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">{</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;api_result&quot;</span><span class="p">:</span> <span class="s2">&quot;5000&quot;</span>
 <span class="p">}</span>
 </pre></div>
@@ -540,9 +533,7 @@ computer, then click submit.</p>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -581,7 +572,8 @@ computer, then click submit.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'../',
-            VERSION:'4.9.3',
+            VERSION:'5.2.23',
+            LANGUAGE:'None',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true,
@@ -599,14 +591,11 @@ computer, then click submit.</p>
     <script type="text/javascript" src="../_static/js/theme.js"></script>
   
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
   </script>
-  
  
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
