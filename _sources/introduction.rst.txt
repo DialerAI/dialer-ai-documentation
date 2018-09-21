@@ -106,7 +106,7 @@ Features
     |                 | connect the user to another IVR/phone number on    |
     |                 | pressing a key.                                    |
     +-----------------+----------------------------------------------------+
-    | Web Interface   | DialerAI can be managed via a Web interface.       |
+    | Web Interface   | It can be fully managed via a Web interface.       |
     |                 | Realtime web-based reports for call details and    |
     |                 | current calls.                                     |
     +-----------------+----------------------------------------------------+

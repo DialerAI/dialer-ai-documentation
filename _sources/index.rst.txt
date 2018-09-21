@@ -1,7 +1,7 @@
 .. DialerAI documentation master file
 
-DialerAI - Auto Dialer for CallCenter
-=====================================
+Auto-Dialer Solution for CallCenter
+===================================
 
 :Release: |release|
 :Date: |today|
