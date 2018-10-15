@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>API Reference &mdash; DialerAI 5.6.0 documentation</title>
+  <title>Webhook &mdash; DialerAI 5.6.0 documentation</title>
   
 
   
@@ -28,8 +28,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="UserSerializer" href="api-doc/user_serializers.html" />
-    <link rel="prev" title="Admin Panel" href="admin-guide/admin-panel.html" /> 
+    <link rel="prev" title="PaymentSerializer" href="api-doc/payment_serializers.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -211,7 +210,7 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">API Reference</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="api-reference.html">API Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api-doc/user_serializers.html"><cite>UserSerializer</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="api-doc/userprofile_serializers.html"><cite>UserProfileSerializer</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="api-doc/audiofile_serializers.html"><cite>AudioFileSerializer</cite></a></li>
@@ -233,7 +232,7 @@
 <li class="toctree-l2"><a class="reference internal" href="api-doc/payment_serializers.html"><cite>PaymentSerializer</cite></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="webhook.html">Webhook</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Webhook</a></li>
 </ul>
 
             
@@ -279,7 +278,7 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
-      <li>API Reference</li>
+      <li>Webhook</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -297,40 +296,99 @@
            <div itemprop="articleBody">
             
 
-    <div class="section" id="api-reference">
-<span id="id1"></span><h1>API Reference<a class="headerlink" href="#api-reference" title="Permalink to this headline">¶</a></h1>
-<p>Contents:</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/user_serializers.html"><cite>UserSerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/userprofile_serializers.html"><cite>UserProfileSerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/audiofile_serializers.html"><cite>AudioFileSerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/branching_template_serializers.html"><cite>BranchingTemplateSerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/campaign_serializers.html"><cite>CampaignSerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/cdr_serializers.html"><cite>VoIPCallSerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/contact_serializers.html"><cite>ContactSerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/content_type_serializers.html"><cite>ContentTypeSerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/dnc_serializers.html"><cite>DNCSerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/dnc_contact_serializers.html"><cite>DNCContactSerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/gateway_serializers.html"><cite>GatewaySerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/phonebook_serializers.html"><cite>PhonebookSerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/section_template_serializers.html"><cite>SectionTemplateSerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/sms_campaign_serializers.html"><cite>SMSCampaignSerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/sms_gateway_serializers.html"><cite>SMSGatewaySerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/subscriber_list_serializers.html"><cite>SubscriberListSerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/survey_serializers.html"><cite>SurveySerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/survey_template_serializers.html"><cite>SurveyTemplateSerializer</cite></a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/payment_serializers.html"><cite>PaymentSerializer</cite></a></li>
-</ul>
+    <div class="section" id="webhook">
+<span id="id1"></span><h1>Webhook<a class="headerlink" href="#webhook" title="Permalink to this headline">¶</a></h1>
+<p>A webhook can easily be configured in order to push CDRs to your platform or to your API endpoint. When a new CDR is created on our system, a POST request will be sent with the CDR details.
+This can be useful if you need to keep some information about the call being made or need to activate some application after a dial or an inbound call is made.</p>
+<p>The Webhook comes with a UI on the admin, <a class="reference external" href="https://HOSTNAME/admin/webhook/webhookcdr/">https://HOSTNAME/admin/webhook/webhookcdr/</a> and it has a retry mechanism, which ensure that CDRs are pushed correctly.
+If there is an error, for instance your endpoint didn’t accept it, the error will be displayed on the UI.</p>
+<a class="reference internal image-reference" href="_images/admin-webhookcdr.png"><img alt="_images/admin-webhookcdr.png" src="_images/admin-webhookcdr.png" style="width: 700px;" /></a>
+<p>The Webhook endpoint needs to accept the POST method, all the following fields will be sent:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">* client_id:</span>
+<span class="go">    type: &quot;number&quot;</span>
+<span class="go">    description: &quot;Account code to indicate which customer the dial should be associated with&quot;</span>
+
+<span class="go">* cdr_id:</span>
+<span class="go">    type: &quot;string&quot;</span>
+<span class="go">    description: &quot;CDR API id. ie GET /rest-api/cdr/&lt;id&gt;&quot;</span>
+
+<span class="go">* callerid:</span>
+<span class="go">    type: &quot;string&quot;</span>
+<span class="go">    description: &quot;Caller id presented used by the dialer&quot;</span>
+
+<span class="go">* callrequest_id:</span>
+<span class="go">    type: &quot;string&quot;</span>
+<span class="go">    description: &quot;Dialer root call id&quot;</span>
+
+<span class="go">* call_id:</span>
+<span class="go">    type: &quot;string&quot;</span>
+<span class="go">    description: &quot;Dialer FreeSwitch call id&quot;</span>
+
+<span class="go">* campaign_id:</span>
+<span class="go">    type: &quot;number&quot;</span>
+<span class="go">    description: &quot;Dialer campaign id&quot;</span>
+
+<span class="go">* campaign_name:</span>
+<span class="go">    type: &quot;string&quot;</span>
+<span class="go">    description: &quot;Dialer campaign name&quot;</span>
+
+<span class="go">* leg_type:</span>
+<span class="go">    type: &quot;number&quot;</span>
+<span class="go">    description: &quot;Call leg type&quot;</span>
+
+<span class="go">* phone_number:</span>
+<span class="go">    type: &quot;string&quot;</span>
+<span class="go">    description: &quot;Phone number of the lead&quot;</span>
+
+<span class="go">* list_phonebook_id:</span>
+<span class="go">    type: &quot;array&quot;</span>
+<span class="go">    items: {</span>
+<span class="go">        type: &quot;number&quot;</span>
+<span class="go">    }</span>
+<span class="go">    description: &quot;List id that the lead is in&quot;</span>
+
+<span class="go">* list_phonebook_name:</span>
+<span class="go">    type: &quot;array&quot;</span>
+<span class="go">    items: {</span>
+<span class="go">        type: &quot;string&quot;</span>
+<span class="go">    }</span>
+<span class="go">    description: &quot;List name that the lead is in&quot;</span>
+
+<span class="go">* gateway:</span>
+<span class="go">    type: &quot;string&quot;</span>
+<span class="go">    description: &quot;Gateway used by the dialer to place the call&quot;</span>
+
+<span class="go">* amd_status:</span>
+<span class="go">    type: &quot;number&quot;</span>
+<span class="go">    description: &quot;AMD status returned by dialer&quot;</span>
+
+<span class="go">* hangup_cause_code:</span>
+<span class="go">    type: &quot;number&quot;</span>
+<span class="go">    description: &quot;Hangup cause code returned by dialer&quot;</span>
+
+<span class="go">* hangup_cause:</span>
+<span class="go">    type: &quot;string&quot;</span>
+<span class="go">    description: &quot;Hangup cause string returned by dialer&quot;</span>
+
+<span class="go">* cost:</span>
+<span class="go">    type: &quot;number&quot;</span>
+<span class="go">    description: &quot;Cost of the dial&quot;</span>
+
+<span class="go">* billed_duration:</span>
+<span class="go">    type: &quot;number&quot;</span>
+<span class="go">    description: &quot;Billable time&quot;</span>
+
+<span class="go">* incremental_duration:</span>
+<span class="go">    type: &quot;number&quot;</span>
+<span class="go">    description: &quot;Incremental duration on the CDR record&quot;</span>
+
+<span class="go">* call_date:</span>
+<span class="go">    type: &quot;string&quot;</span>
+<span class="go">    format: &quot;date-time&quot;</span>
+<span class="go">    description: &quot;Timestamp of when the dial was placed&quot;</span>
+</pre></div>
 </div>
-<p>Testing console of APIs:</p>
-<blockquote>
-<div><strong>URL</strong> : <a class="reference external" href="http://HOSTNAME_IP/rest-api/">http://HOSTNAME_IP/rest-api/</a></div></blockquote>
-<a class="reference internal image-reference" href="_images/list_of_api.png"><img alt="_images/list_of_api.png" src="_images/list_of_api.png" style="width: 700px;" /></a>
-<p>To inspect the available APIs, click on a link from above API list:</p>
-<blockquote>
-<div><strong>URL</strong> : <a class="reference external" href="http://HOSTNAME_IP/rest-api/phonebook/">http://HOSTNAME_IP/rest-api/phonebook/</a></div></blockquote>
-<a class="reference internal image-reference" href="_images/phonebook_playground.png"><img alt="_images/phonebook_playground.png" src="_images/phonebook_playground.png" style="width: 700px;" /></a>
+<p>Additionally, there is an header ‘x-api-key’ which can be set for authentication.</p>
 </div>
 
 
@@ -342,10 +400,8 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="api-doc/user_serializers.html" class="btn btn-neutral float-right" title="UserSerializer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
-      
-        <a href="admin-guide/admin-panel.html" class="btn btn-neutral" title="Admin Panel" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="api-doc/payment_serializers.html" class="btn btn-neutral" title="PaymentSerializer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
