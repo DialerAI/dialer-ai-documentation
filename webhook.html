@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Webhook &mdash; DialerAI 5.6.0 documentation</title>
+  <title>Webhook &mdash; DialerAI 5.6.2 documentation</title>
   
 
   
@@ -166,6 +166,29 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="user-guide/call-center.html">Call-Center</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/call-center.html#overview">1. Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/call-center.html#agents">2. Agents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/call-center.html#editing-the-agent">Editing the Agent</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/call-center.html#registering-a-sip-phone">Registering a SIP Phone</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/call-center.html#short-codes">Short Codes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/call-center.html#queue">3. Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/call-center.html#callcenter-campaign">4. Callcenter Campaign</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/call-center.html#tab-general-settings">Tab general settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/call-center.html#tab-dialer-settings">Tab dialer settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/call-center.html#tab-retry-settings">Tab retry settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/call-center.html#tab-voicemail-settings">Tab voicemail settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/call-center.html#tab-schedule-settings">Tab schedule settings</a></li>
+<li class="toctree-l3"><a class="reference internal" href="user-guide/call-center.html#tab-extra-settings">Tab extra settings</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/call-center.html#use-queue-within-an-ivr">5. Use Queue within an IVR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/call-center.html#regulating-calls-according-to-agents-available">6. Regulating Calls According to Agents available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="user-guide/call-center.html#reporting">7. Reporting</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="admin-guide.html">Admin Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="admin-guide/SMS-config.html">SMS Configuration</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="admin-guide/SMS-config.html#configuration">Configuration</a></li>
@@ -298,10 +321,10 @@
 
     <div class="section" id="webhook">
 <span id="id1"></span><h1>Webhook<a class="headerlink" href="#webhook" title="Permalink to this headline">¶</a></h1>
-<p>A webhook can easily be configured in order to push CDRs to your platform or to your API endpoint. When a new CDR is created on our system, a POST request will be sent with the CDR details.
-This can be useful if you need to keep some information about the call being made or need to activate some application after a dial or an inbound call is made.</p>
-<p>The Webhook comes with a UI on the admin, <a class="reference external" href="https://HOSTNAME/admin/webhook/webhookcdr/">https://HOSTNAME/admin/webhook/webhookcdr/</a> and it has a retry mechanism, which ensure that CDRs are pushed correctly.
-If there is an error, for instance your endpoint didn’t accept it, the error will be displayed on the UI.</p>
+<p>A webhook can be configured in order to push CDRs to your own platform or API endpoint. When a new CDR is created on our system, a POST request will be sent with the CDR details.
+This is used when you either need to keep information about the call being made or to activate an application after a dial or an inbound call is made.</p>
+<p>The Webhook comes with a UI on the admin, <a class="reference external" href="https://HOSTNAME/admin/webhook/webhookcdr/">https://HOSTNAME/admin/webhook/webhookcdr/</a> and it has a retry mechanism, which ensures that CDRs are pushed correctly.
+If there is an error, for instance your endpoint didn’t accept the API call, it will be displayed on the UI.</p>
 <a class="reference internal image-reference" href="_images/admin-webhookcdr.png"><img alt="_images/admin-webhookcdr.png" src="_images/admin-webhookcdr.png" style="width: 700px;" /></a>
 <p>The Webhook endpoint needs to accept the POST method, all the following fields will be sent:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">* client_id:</span>
