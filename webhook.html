@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Webhook &mdash; DialerAI 5.9.0 documentation</title>
+  <title>Webhook &mdash; DialerAI 6.3.1 documentation</title>
   
 
   
@@ -327,11 +327,7 @@ This is used when you either need to keep information about the call being made 
 If there is an error, for instance your endpoint didn’t accept the API call, it will be displayed on the UI.</p>
 <a class="reference internal image-reference" href="_images/admin-webhookcdr.png"><img alt="_images/admin-webhookcdr.png" src="_images/admin-webhookcdr.png" style="width: 700px;" /></a>
 <p>The Webhook endpoint needs to accept the POST method, all the following fields will be sent:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">* client_id:</span>
-<span class="go">    type: &quot;number&quot;</span>
-<span class="go">    description: &quot;Account code to indicate which customer the dial should be associated with&quot;</span>
-
-<span class="go">* cdr_id:</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">* cdr_id:</span>
 <span class="go">    type: &quot;string&quot;</span>
 <span class="go">    description: &quot;CDR API id. ie GET /rest-api/cdr/&lt;id&gt;&quot;</span>
 
@@ -363,23 +359,9 @@ If there is an error, for instance your endpoint didn’t accept the API call, i
 <span class="go">    type: &quot;string&quot;</span>
 <span class="go">    description: &quot;Phone number of the lead&quot;</span>
 
-<span class="go">* list_phonebook_id:</span>
-<span class="go">    type: &quot;array&quot;</span>
-<span class="go">    items: {</span>
-<span class="go">        type: &quot;number&quot;</span>
-<span class="go">    }</span>
-<span class="go">    description: &quot;List id that the lead is in&quot;</span>
-
-<span class="go">* list_phonebook_name:</span>
-<span class="go">    type: &quot;array&quot;</span>
-<span class="go">    items: {</span>
-<span class="go">        type: &quot;string&quot;</span>
-<span class="go">    }</span>
-<span class="go">    description: &quot;List name that the lead is in&quot;</span>
-
-<span class="go">* gateway:</span>
+<span class="go">* gateway_id:</span>
 <span class="go">    type: &quot;string&quot;</span>
-<span class="go">    description: &quot;Gateway used by the dialer to place the call&quot;</span>
+<span class="go">    description: &quot;Gateway Id used by the dialer to place the call&quot;</span>
 
 <span class="go">* amd_status:</span>
 <span class="go">    type: &quot;number&quot;</span>
@@ -433,7 +415,7 @@ If there is an error, for instance your endpoint didn’t accept the API call, i
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017-2018, DialerAI AutoDialer for CallCenter &lt;sales@dialer.ai&gt;
+        &copy; Copyright 2017-2020, DialerAI AutoDialer for CallCenter &lt;sales@dialer.ai&gt;
 
     </p>
   </div> 
