@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Webhook &mdash; DialerAI 6.3.1 documentation</title>
+  <title>Webhook &mdash; DialerAI 6.4.16 documentation</title>
   
 
   
@@ -371,9 +371,17 @@ If there is an error, for instance your endpoint didn’t accept the API call, i
 <span class="go">    type: &quot;number&quot;</span>
 <span class="go">    description: &quot;Hangup cause code returned by dialer&quot;</span>
 
-<span class="go">* hangup_cause:</span>
+<span class="go">* disposition:</span>
 <span class="go">    type: &quot;string&quot;</span>
-<span class="go">    description: &quot;Hangup cause string returned by dialer&quot;</span>
+<span class="go">    description: &quot;Call disposition/Hangup cause string returned by dialer&quot;</span>
+
+<span class="go">* lead_disposition:</span>
+<span class="go">    type: &quot;string&quot;</span>
+<span class="go">    description: &quot;Lead disposition - Agents will mark a contact with this disposition&quot;</span>
+
+<span class="go">* lead_disposition_id:</span>
+<span class="go">    type: &quot;string&quot;</span>
+<span class="go">    description: &quot;Lead disposition ID - Agents will mark a contact with this disposition&quot;</span>
 
 <span class="go">* cost:</span>
 <span class="go">    type: &quot;number&quot;</span>
