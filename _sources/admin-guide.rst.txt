@@ -28,3 +28,4 @@ Tasks which will be performed by DialerAI admin, with our training, will include
     ./admin-guide/dialer-settings.rst
     ./admin-guide/add-user.rst
     ./admin-guide/admin-panel
+    ./advanced-configuration/advanced-configuration-guide.rst
