@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Webhook &mdash; DialerAI 6.4.23 documentation</title>
+  <title>Webhook &mdash; DialerAI 6.5.8 documentation</title>
   
 
   
@@ -412,6 +412,11 @@ If there is an error, for instance your endpoint didn’t accept the API call, i
 <span class="go">* survey_result:</span>
 <span class="go">    type: &quot;array&quot;</span>
 <span class="go">    description: &quot;IVR/Survey interactions and results&quot;</span>
+
+<span class="go">* subscriber:</span>
+<span class="go">    type: &quot;array&quot;</span>
+<span class="go">    description: information about the subscriber/contact</span>
+<span class="go">    this will contain the following fields: {subscriber_id: Value, full_name: &quot;Value&quot;, additional_vars: JSON}</span>
 </pre></div>
 </div>
 <p>Additionally, there is an header ‘x-api-key’ which can be set for authentication.</p>
