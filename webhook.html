@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Webhook &mdash; DialerAI 6.5.8 documentation</title>
+  <title>Webhook &mdash; DialerAI 6.5.9 documentation</title>
   
 
   
@@ -260,7 +260,10 @@
 <li class="toctree-l2"><a class="reference internal" href="api-doc/payment_serializers.html"><cite>PaymentSerializer</cite></a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Webhook</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Webhook</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#field-information">Field information</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -328,7 +331,7 @@
 <span id="id1"></span><h1>Webhook<a class="headerlink" href="#webhook" title="Permalink to this headline">¶</a></h1>
 <p>A webhook can be configured in order to push CDRs to your own platform or API endpoint. When a new CDR is created on our system, a POST request will be sent with the CDR details.
 This is used when you either need to keep information about the call being made or to activate an application after a dial or an inbound call is made.</p>
-<p>The Webhook comes with a UI on the admin, <a class="reference external" href="https://HOSTNAME/admin/webhook/webhookcdr/">https://HOSTNAME/admin/webhook/webhookcdr/</a> and it has a retry mechanism, which ensures that CDRs are pushed correctly.
+<p>The Webhook comes with a UI on the admin, <a class="reference external" href="https://HOSTNAME/admin/webhook/webhook/">https://HOSTNAME/admin/webhook/webhook/</a> and it has a retry mechanism, which ensures that CDRs are pushed correctly.
 If there is an error, for instance your endpoint didn’t accept the API call, it will be displayed on the UI.</p>
 <a class="reference internal image-reference" href="_images/admin-webhookcdr.png"><img alt="_images/admin-webhookcdr.png" src="_images/admin-webhookcdr.png" style="width: 700px;" /></a>
 <p>The Webhook endpoint needs to accept the POST method, all the following fields will be sent:</p>
@@ -420,6 +423,50 @@ If there is an error, for instance your endpoint didn’t accept the API call, i
 </pre></div>
 </div>
 <p>Additionally, there is an header ‘x-api-key’ which can be set for authentication.</p>
+<div class="section" id="field-information">
+<h2>Field information<a class="headerlink" href="#field-information" title="Permalink to this headline">¶</a></h2>
+<p><strong>DISPOSITION:</strong></p>
+<p>This is the call disposition, a more simplistic version of hangup Q850.</p>
+<p>It can be one of those values: ANSWER, BUSY, NOANSWER, REJECTED, CANCEL, CONGESTION, DNC,
+UNAUTHORIZED or FAILED.</p>
+<p>The <cite>hangup_cause_code</cite> will translate like this:</p>
+<blockquote>
+<div><ul class="simple">
+<li>16 -&gt; ANSWER</li>
+<li>17 -&gt; BUSY</li>
+<li>19 -&gt; NOANSWER</li>
+<li>21 -&gt; REJECTED</li>
+<li>487 -&gt; CANCEL</li>
+<li>42 -&gt; CONGESTION</li>
+<li>-1 -&gt; DNC</li>
+<li>-2 -&gt; UNAUTHORIZED</li>
+<li>others  -&gt; FAILED</li>
+</ul>
+</div></blockquote>
+<p><strong>HANGUP_CAUSE_CODE:</strong></p>
+<p>This is Q850, reference to <a class="reference external" href="https://freeswitch.org/confluence/display/FREESWITCH/Hangup+Cause+Code+Table">https://freeswitch.org/confluence/display/FREESWITCH/Hangup+Cause+Code+Table</a></p>
+<p><strong>LEG TYPE:</strong></p>
+<p>It can be one of those values:</p>
+<blockquote>
+<div><ul class="simple">
+<li>1: A-Leg</li>
+<li>2: B-Leg</li>
+<li>3: COLD_XFER</li>
+<li>4: WARM_XFER</li>
+<li>5: WAY3_XFER</li>
+</ul>
+</div></blockquote>
+<p><strong>AMD STATUS:</strong></p>
+<p>It can be one of those values:</p>
+<blockquote>
+<div><ul class="simple">
+<li>0: NODETECT</li>
+<li>1: PERSON</li>
+<li>2: MACHINE</li>
+<li>3: UNSURE</li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 
 
