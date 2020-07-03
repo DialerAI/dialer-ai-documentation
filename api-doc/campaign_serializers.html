@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>CampaignSerializer &mdash; DialerAI 6.5.9 documentation</title>
+  <title>Campaign API &mdash; DialerAI 6.5.18 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="VoIPCallSerializer" href="cdr_serializers.html" />
-    <link rel="prev" title="BranchingTemplateSerializer" href="branching_template_serializers.html" /> 
+    <link rel="next" title="CDR API" href="cdr_serializers.html" />
+    <link rel="prev" title="Phonebook API" href="phonebook_serializers.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -240,25 +240,29 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../api-reference.html">API Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="user_serializers.html"><cite>UserSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="userprofile_serializers.html"><cite>UserProfileSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="audiofile_serializers.html"><cite>AudioFileSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="branching_template_serializers.html"><cite>BranchingTemplateSerializer</cite></a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#"><cite>CampaignSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="cdr_serializers.html"><cite>VoIPCallSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="contact_serializers.html"><cite>ContactSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="content_type_serializers.html"><cite>ContentTypeSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="dnc_serializers.html"><cite>DNCSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="dnc_contact_serializers.html"><cite>DNCContactSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="gateway_serializers.html"><cite>GatewaySerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="phonebook_serializers.html"><cite>PhonebookSerializer</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact_serializers.html"><cite>Contact API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="phonebook_serializers.html"><cite>Phonebook API</cite></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><cite>Campaign API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="cdr_serializers.html"><cite>CDR API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="subscriber_list_serializers.html"><cite>SubscriberList API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_serializers.html"><cite>User API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dnc_serializers.html"><cite>DNC API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dnc_contact_serializers.html"><cite>DNCContact API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="gateway_serializers.html"><cite>Gateway API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="callcenter_config_serializers.html"><cite>Callcenter Config API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue_serializers.html"><cite>Queue API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="agent_serializers.html"><cite>Agent API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="survey_template_serializers.html"><cite>Survey Template API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="section_template_serializers.html"><cite>SectionTemplateSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="sms_campaign_serializers.html"><cite>SMSCampaignSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="sms_gateway_serializers.html"><cite>SMSGatewaySerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="subscriber_list_serializers.html"><cite>SubscriberListSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="survey_serializers.html"><cite>SurveySerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="survey_template_serializers.html"><cite>SurveyTemplateSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="payment_serializers.html"><cite>PaymentSerializer</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="section_template_serializers.html#section-template-api"><cite>Section Template API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="branching_template_serializers.html"><cite>Branching Template API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="survey_serializers.html"><cite>Survey API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="sms_campaign_serializers.html"><cite>SMS Campaign API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="sms_gateway_serializers.html"><cite>SMSGateway API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="payment_serializers.html"><cite>Payment API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="audiofile_serializers.html"><cite>Audio API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile_serializers.html"><cite>UserProfile API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_type_serializers.html"><cite>Content Type API</cite></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../webhook.html">Webhook</a><ul>
@@ -313,7 +317,7 @@
         
           <li><a href="../api-reference.html">API Reference</a> &raquo;</li>
         
-      <li><cite>CampaignSerializer</cite></li>
+      <li><cite>Campaign API</cite></li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -331,11 +335,11 @@
            <div itemprop="articleBody">
             
 
-    <span class="target" id="module-apirest.campaign_serializers"></span><div class="section" id="campaignserializer">
-<span id="campaignresource-model"></span><h1><cite>CampaignSerializer</cite><a class="headerlink" href="#campaignserializer" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+    <span class="target" id="module-apirest.campaign_serializers"></span><div class="section" id="campaign-api">
+<span id="campaignresource-model"></span><h1><cite>Campaign API</cite><a class="headerlink" href="#campaign-api" title="Permalink to this headline">¶</a></h1>
+<dl class="data">
 <dt id="apirest.campaign_serializers.CampaignSerializer">
-<em class="property">class </em><code class="descclassname">apirest.campaign_serializers.</code><code class="descname">CampaignSerializer</code><span class="sig-paren">(</span><em>instance=None</em>, <em>data=&lt;class rest_framework.fields.empty&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#apirest.campaign_serializers.CampaignSerializer" title="Permalink to this definition">¶</a></dt>
+<code class="descname">CampaignSerializer</code><a class="headerlink" href="#apirest.campaign_serializers.CampaignSerializer" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Create</strong>:</p>
 <blockquote>
 <div><p>CURL Usage:</p>
@@ -467,6 +471,29 @@
 </pre></div>
 </div>
 </div></blockquote>
+<p><strong>Create Callcenter Campaign</strong>:</p>
+<blockquote>
+<div><p>CallCenter campaigns have 3 extra parameters that normal IVR campaign don’t have: queue, callcenter_config &amp; campaign_type.</p>
+<p><strong>Campaign_type:</strong> This needs to be set to 3, this will set the campaign as Callcenter campaign.</p>
+<p><strong>Queue:</strong> This is the queue to use for the callcenter Campaign.</p>
+<p><strong>CallCenter Config:</strong> This is the Callcenter config, this configures the script to use, CRM external URLs, etc…</p>
+<p>CURL Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">--</span><span class="n">dump</span><span class="o">-</span><span class="n">header</span> <span class="o">-</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="o">--</span><span class="n">data</span> <span class="s1">&#39;{&quot;name&quot;: &quot;callcenter-campaign-01&quot;, &quot;description&quot;: &quot;&quot;, &quot;callerid&quot;: &quot;1239876&quot;, &quot;startingdate&quot;: &quot;2017-01-01 13:13:33&quot;, &quot;expirationdate&quot;: &quot;2017-06-14 13:13:33&quot;, &quot;frequency&quot;: &quot;10&quot;, &quot;max_aleg&quot;:28, &quot;max_xfer&quot;:12, &quot;dial_method&quot;:2, &quot;agent_dial_rate&quot;:1.2, &quot;callmaxduration&quot;: &quot;50&quot;, &quot;maxretry&quot;: &quot;3&quot;, &quot;intervalretry&quot;: &quot;3000&quot;, &quot;calltimeout&quot;: &quot;45&quot;, &quot;aleg_gateway&quot;: &quot;/rest-api/gateway/2/&quot;, &quot;sms_gateway&quot;: &quot;&quot;, &quot;content_type&quot;: &quot;/rest-api/content-type/42/&quot;, &quot;object_id&quot; : &quot;101&quot;, &quot;extra_data&quot;: &quot;2000&quot;, &quot;voicemail&quot;: &quot;True&quot;, &quot;amd_behavior&quot;: &quot;1&quot;, &quot;voicemail_audiofile&quot;: &quot;&quot;, &quot;dnc&quot;: &quot;&quot;, &quot;user&quot;: &quot;/rest-api/users/1/&quot;, &quot;phonebook&quot;: [&quot;/rest-api/phonebook/1/&quot;], &quot;daily_start_time&quot;: &quot;00:00:00&quot;, &quot;daily_stop_time&quot;: &quot;23:59:59&quot;, &quot;queue&quot;:&quot;/rest-api/queue/6/&quot;,&quot;callcenter_config&quot;:&quot;/rest-api/callcenter_config/1/&quot;,&quot;campaign_type&quot;:3}&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">campaigns</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Response:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.0</span> <span class="mi">201</span> <span class="n">CREATED</span>
+<span class="n">Date</span><span class="p">:</span> <span class="n">Fri</span><span class="p">,</span> <span class="mi">14</span> <span class="n">Jun</span> <span class="mi">2013</span> <span class="mi">09</span><span class="p">:</span><span class="mi">52</span><span class="p">:</span><span class="mi">27</span> <span class="n">GMT</span>
+<span class="n">Server</span><span class="p">:</span> <span class="n">WSGIServer</span><span class="o">/</span><span class="mf">0.1</span> <span class="n">Python</span><span class="o">/</span><span class="mf">2.7</span><span class="o">.</span><span class="mi">3</span>
+<span class="n">Vary</span><span class="p">:</span> <span class="n">Accept</span><span class="p">,</span> <span class="n">Accept</span><span class="o">-</span><span class="n">Language</span><span class="p">,</span> <span class="n">Cookie</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span><span class="p">;</span> <span class="n">charset</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Language</span><span class="p">:</span> <span class="n">en</span><span class="o">-</span><span class="n">us</span>
+<span class="n">Allow</span><span class="p">:</span> <span class="n">GET</span><span class="p">,</span> <span class="n">POST</span><span class="p">,</span> <span class="n">HEAD</span><span class="p">,</span> <span class="n">OPTIONS</span>
+
+<span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="mi">163</span><span class="p">,</span><span class="s2">&quot;campaign_code&quot;</span><span class="p">:</span><span class="s2">&quot;KTYIZZPXFO&quot;</span><span class="p">,</span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;callcenter-campaign-05&quot;</span><span class="p">,</span><span class="s2">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">,</span><span class="s2">&quot;callerid&quot;</span><span class="p">:</span><span class="s2">&quot;1239876&quot;</span><span class="p">,</span><span class="s2">&quot;phonebook&quot;</span><span class="p">:[</span><span class="s2">&quot;/rest-api/phonebook/1/&quot;</span><span class="p">],</span><span class="s2">&quot;startingdate&quot;</span><span class="p">:</span><span class="s2">&quot;2017-01-01T13:13:33+01:00&quot;</span><span class="p">,</span><span class="s2">&quot;expirationdate&quot;</span><span class="p">:</span><span class="s2">&quot;2017-06-14T13:13:33+02:00&quot;</span><span class="p">,</span><span class="s2">&quot;aleg_gateway&quot;</span><span class="p">:</span><span class="s2">&quot;/rest-api/gateway/2/&quot;</span><span class="p">,</span><span class="s2">&quot;user&quot;</span><span class="p">:</span><span class="s2">&quot;/rest-api/users/1/&quot;</span><span class="p">,</span><span class="s2">&quot;status&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="s2">&quot;object_id&quot;</span><span class="p">:</span><span class="mi">21</span><span class="p">,</span><span class="s2">&quot;extra_data&quot;</span><span class="p">:</span><span class="s2">&quot;2000&quot;</span><span class="p">,</span><span class="s2">&quot;dnc&quot;</span><span class="p">:</span><span class="n">null</span><span class="p">,</span><span class="s2">&quot;voicemail&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span><span class="s2">&quot;amd_behavior&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;voicemail_audiofile&quot;</span><span class="p">:</span><span class="n">null</span><span class="p">,</span><span class="s2">&quot;voicemail_tts&quot;</span><span class="p">:</span><span class="n">null</span><span class="p">,</span><span class="s2">&quot;frequency&quot;</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span><span class="s2">&quot;max_aleg&quot;</span><span class="p">:</span><span class="mi">28</span><span class="p">,</span><span class="s2">&quot;max_xfer&quot;</span><span class="p">:</span><span class="mi">12</span><span class="p">,</span><span class="s2">&quot;dial_method&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">,</span><span class="s2">&quot;agent_dial_rate&quot;</span><span class="p">:</span><span class="s2">&quot;1.20&quot;</span><span class="p">,</span><span class="s2">&quot;callmaxduration&quot;</span><span class="p">:</span><span class="mi">50</span><span class="p">,</span><span class="s2">&quot;maxretry&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">,</span><span class="s2">&quot;intervalretry&quot;</span><span class="p">:</span><span class="mi">3000</span><span class="p">,</span><span class="s2">&quot;calltimeout&quot;</span><span class="p">:</span><span class="mi">45</span><span class="p">,</span><span class="s2">&quot;daily_start_time&quot;</span><span class="p">:</span><span class="s2">&quot;00:00:00&quot;</span><span class="p">,</span><span class="s2">&quot;daily_stop_time&quot;</span><span class="p">:</span><span class="s2">&quot;23:59:59&quot;</span><span class="p">,</span><span class="s2">&quot;monday&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span><span class="s2">&quot;tuesday&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span><span class="s2">&quot;wednesday&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span><span class="s2">&quot;thursday&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span><span class="s2">&quot;friday&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span><span class="s2">&quot;saturday&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span><span class="s2">&quot;sunday&quot;</span><span class="p">:</span><span class="n">true</span><span class="p">,</span><span class="s2">&quot;completion_enabled&quot;</span><span class="p">:</span><span class="n">false</span><span class="p">,</span><span class="s2">&quot;sms_gateway&quot;</span><span class="p">:</span><span class="n">null</span><span class="p">,</span><span class="s2">&quot;record_bleg&quot;</span><span class="p">:</span><span class="n">false</span><span class="p">,</span><span class="s2">&quot;record_call&quot;</span><span class="p">:</span><span class="n">false</span><span class="p">,</span><span class="s2">&quot;timezone_dialing&quot;</span><span class="p">:</span><span class="n">false</span><span class="p">,</span><span class="s2">&quot;archived&quot;</span><span class="p">:</span><span class="n">false</span><span class="p">,</span><span class="s2">&quot;tts_language&quot;</span><span class="p">:</span><span class="s2">&quot;en&quot;</span><span class="p">,</span><span class="s2">&quot;unavailable_audiofile&quot;</span><span class="p">:</span><span class="n">null</span><span class="p">,</span><span class="s2">&quot;route_type&quot;</span><span class="p">:</span><span class="mi">1</span><span class="p">,</span><span class="s2">&quot;route_audiofile&quot;</span><span class="p">:</span><span class="n">null</span><span class="p">,</span><span class="s2">&quot;route_tts&quot;</span><span class="p">:</span><span class="n">null</span><span class="p">,</span><span class="s2">&quot;xfer_gateway&quot;</span><span class="p">:</span><span class="n">null</span><span class="p">,</span><span class="s2">&quot;xfer_phonenumber&quot;</span><span class="p">:</span><span class="n">null</span><span class="p">,</span><span class="s2">&quot;has_been_started&quot;</span><span class="p">:</span><span class="n">false</span><span class="p">,</span><span class="s2">&quot;has_been_duplicated&quot;</span><span class="p">:</span><span class="n">false</span><span class="p">,</span><span class="s2">&quot;duplicated_from&quot;</span><span class="p">:</span><span class="n">null</span><span class="p">,</span><span class="s2">&quot;queue&quot;</span><span class="p">:</span><span class="s2">&quot;/rest-api/queue/6/&quot;</span><span class="p">,</span><span class="s2">&quot;callcenter_config&quot;</span><span class="p">:</span><span class="s2">&quot;/rest-api/callcenter_config/14/&quot;</span><span class="p">,</span><span class="s2">&quot;campaign_type&quot;</span><span class="p">:</span><span class="mi">3</span><span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
 </dd></dl>
 
 </div>
@@ -480,10 +507,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="cdr_serializers.html" class="btn btn-neutral float-right" title="VoIPCallSerializer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="cdr_serializers.html" class="btn btn-neutral float-right" title="CDR API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="branching_template_serializers.html" class="btn btn-neutral" title="BranchingTemplateSerializer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="phonebook_serializers.html" class="btn btn-neutral" title="Phonebook API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

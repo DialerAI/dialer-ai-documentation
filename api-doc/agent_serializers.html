@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Gateway API &mdash; DialerAI 6.5.18 documentation</title>
+  <title>Agent API &mdash; DialerAI 6.5.18 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Callcenter Config API" href="callcenter_config_serializers.html" />
-    <link rel="prev" title="DNCContact API" href="dnc_contact_serializers.html" /> 
+    <link rel="next" title="Survey Template API" href="survey_template_serializers.html" />
+    <link rel="prev" title="Queue API" href="queue_serializers.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -248,10 +248,10 @@
 <li class="toctree-l2"><a class="reference internal" href="user_serializers.html"><cite>User API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="dnc_serializers.html"><cite>DNC API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="dnc_contact_serializers.html"><cite>DNCContact API</cite></a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#"><cite>Gateway API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="gateway_serializers.html"><cite>Gateway API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="callcenter_config_serializers.html"><cite>Callcenter Config API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="queue_serializers.html"><cite>Queue API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="agent_serializers.html"><cite>Agent API</cite></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><cite>Agent API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="survey_template_serializers.html"><cite>Survey Template API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="section_template_serializers.html"><cite>SectionTemplateSerializer</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="section_template_serializers.html#section-template-api"><cite>Section Template API</cite></a></li>
@@ -317,7 +317,7 @@
         
           <li><a href="../api-reference.html">API Reference</a> &raquo;</li>
         
-      <li><cite>Gateway API</cite></li>
+      <li><cite>Agent API</cite></li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -335,30 +335,73 @@
            <div itemprop="articleBody">
             
 
-    <span class="target" id="module-apirest.gateway_serializers"></span><div class="section" id="gateway-api">
-<span id="gatewayserializer-model"></span><h1><cite>Gateway API</cite><a class="headerlink" href="#gateway-api" title="Permalink to this headline">¶</a></h1>
+    <span class="target" id="module-apirest.agent_serializers"></span><div class="section" id="agent-api">
+<span id="agentserializer-model"></span><h1><cite>Agent API</cite><a class="headerlink" href="#agent-api" title="Permalink to this headline">¶</a></h1>
 <dl class="data">
-<dt id="apirest.gateway_serializers.GatewaySerializer">
-<code class="descname">GatewaySerializer</code><a class="headerlink" href="#apirest.gateway_serializers.GatewaySerializer" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Read</strong>:</p>
+<dt id="apirest.agent_serializers.AgentSerializer">
+<code class="descname">AgentSerializer</code><a class="headerlink" href="#apirest.agent_serializers.AgentSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Agent API is read only, you cannot create Agents using this API at the moment.</p>
+<p><strong>Read</strong>:</p>
 <blockquote>
 <div><p>CURL Usage:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Accept: application/json&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">gateway</span><span class="o">/</span>
-
-<span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Accept: application/json&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">gateway</span><span class="o">/%</span><span class="n">gateway</span><span class="o">-</span><span class="nb">id</span><span class="o">%/</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Accept: application/json&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">8000</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">agent</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>Response:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-    <span class="s2">&quot;next&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-    <span class="s2">&quot;previous&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-    <span class="s2">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://HOSTNAME_IP/rest-api/gateway/1/&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Default_Gateway&quot;</span>
-        <span class="p">}</span>
-    <span class="p">]</span>
+<span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+<span class="s2">&quot;next&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+<span class="s2">&quot;previous&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+<span class="s2">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:8000/rest-api/agents/19/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:8000/rest-api/users/1/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;last_login&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;internal_name&quot;</span><span class="p">:</span> <span class="s2">&quot;tenant-1@testn04&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;testn04&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;first_name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;last_name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;date_joined&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-15T11:55:56.239231+01:00&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;phone_login&quot;</span><span class="p">:</span> <span class="s2">&quot;agent-04229&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;phone_password&quot;</span><span class="p">:</span> <span class="s2">&quot;560844398338&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;enable_webrtc&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;enable_webrtc_autoanswer&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;caller_id_name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;caller_id_number&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;call_timeout&quot;</span><span class="p">:</span> <span class="mi">45</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;max_no_answer&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;wrap_up_time&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+        <span class="s2">&quot;reject_delay_time&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+        <span class="s2">&quot;busy_delay_time&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;no_answer_delay_time&quot;</span><span class="p">:</span> <span class="mi">15</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:8000/rest-api/agents/20/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:8000/rest-api/users/1/&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;last_login&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+        <span class="s2">&quot;internal_name&quot;</span><span class="p">:</span> <span class="s2">&quot;tenant-1@testn05&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;testn05&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;email&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;first_name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;last_name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;date_joined&quot;</span><span class="p">:</span> <span class="s2">&quot;2020-01-15T11:58:26.000844+01:00&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;phone_login&quot;</span><span class="p">:</span> <span class="s2">&quot;agent-02812&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;phone_password&quot;</span><span class="p">:</span> <span class="s2">&quot;075595325783&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;enable_webrtc&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;enable_webrtc_autoanswer&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+        <span class="s2">&quot;caller_id_name&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;caller_id_number&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;call_timeout&quot;</span><span class="p">:</span> <span class="mi">45</span><span class="p">,</span>
+        <span class="s2">&quot;status&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="s2">&quot;max_no_answer&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+        <span class="s2">&quot;wrap_up_time&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+        <span class="s2">&quot;reject_delay_time&quot;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+        <span class="s2">&quot;busy_delay_time&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+        <span class="s2">&quot;no_answer_delay_time&quot;</span><span class="p">:</span> <span class="mi">15</span>
+    <span class="p">}</span>
+<span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -376,10 +419,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="callcenter_config_serializers.html" class="btn btn-neutral float-right" title="Callcenter Config API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="survey_template_serializers.html" class="btn btn-neutral float-right" title="Survey Template API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="dnc_contact_serializers.html" class="btn btn-neutral" title="DNCContact API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="queue_serializers.html" class="btn btn-neutral" title="Queue API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

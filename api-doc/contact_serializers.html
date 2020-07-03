@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>ContactSerializer &mdash; DialerAI 6.5.9 documentation</title>
+  <title>Contact API &mdash; DialerAI 6.5.18 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="ContentTypeSerializer" href="content_type_serializers.html" />
-    <link rel="prev" title="VoIPCallSerializer" href="cdr_serializers.html" /> 
+    <link rel="next" title="Phonebook API" href="phonebook_serializers.html" />
+    <link rel="prev" title="API Reference" href="../api-reference.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -240,25 +240,29 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../api-reference.html">API Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="user_serializers.html"><cite>UserSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="userprofile_serializers.html"><cite>UserProfileSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="audiofile_serializers.html"><cite>AudioFileSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="branching_template_serializers.html"><cite>BranchingTemplateSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="campaign_serializers.html"><cite>CampaignSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="cdr_serializers.html"><cite>VoIPCallSerializer</cite></a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#"><cite>ContactSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="content_type_serializers.html"><cite>ContentTypeSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="dnc_serializers.html"><cite>DNCSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="dnc_contact_serializers.html"><cite>DNCContactSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="gateway_serializers.html"><cite>GatewaySerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="phonebook_serializers.html"><cite>PhonebookSerializer</cite></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><cite>Contact API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="phonebook_serializers.html"><cite>Phonebook API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="campaign_serializers.html"><cite>Campaign API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="cdr_serializers.html"><cite>CDR API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="subscriber_list_serializers.html"><cite>SubscriberList API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_serializers.html"><cite>User API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dnc_serializers.html"><cite>DNC API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dnc_contact_serializers.html"><cite>DNCContact API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="gateway_serializers.html"><cite>Gateway API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="callcenter_config_serializers.html"><cite>Callcenter Config API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue_serializers.html"><cite>Queue API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="agent_serializers.html"><cite>Agent API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="survey_template_serializers.html"><cite>Survey Template API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="section_template_serializers.html"><cite>SectionTemplateSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="sms_campaign_serializers.html"><cite>SMSCampaignSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="sms_gateway_serializers.html"><cite>SMSGatewaySerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="subscriber_list_serializers.html"><cite>SubscriberListSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="survey_serializers.html"><cite>SurveySerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="survey_template_serializers.html"><cite>SurveyTemplateSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="payment_serializers.html"><cite>PaymentSerializer</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="section_template_serializers.html#section-template-api"><cite>Section Template API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="branching_template_serializers.html"><cite>Branching Template API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="survey_serializers.html"><cite>Survey API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="sms_campaign_serializers.html"><cite>SMS Campaign API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="sms_gateway_serializers.html"><cite>SMSGateway API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="payment_serializers.html"><cite>Payment API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="audiofile_serializers.html"><cite>Audio API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile_serializers.html"><cite>UserProfile API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_type_serializers.html"><cite>Content Type API</cite></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../webhook.html">Webhook</a><ul>
@@ -313,7 +317,7 @@
         
           <li><a href="../api-reference.html">API Reference</a> &raquo;</li>
         
-      <li><cite>ContactSerializer</cite></li>
+      <li><cite>Contact API</cite></li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -331,11 +335,11 @@
            <div itemprop="articleBody">
             
 
-    <span class="target" id="module-apirest.contact_serializers"></span><div class="section" id="contactserializer">
-<span id="contactserializer-model"></span><h1><cite>ContactSerializer</cite><a class="headerlink" href="#contactserializer" title="Permalink to this headline">¶</a></h1>
-<dl class="class">
+    <span class="target" id="module-apirest.contact_serializers"></span><div class="section" id="contact-api">
+<span id="contactserializer-model"></span><h1><cite>Contact API</cite><a class="headerlink" href="#contact-api" title="Permalink to this headline">¶</a></h1>
+<dl class="data">
 <dt id="apirest.contact_serializers.ContactSerializer">
-<em class="property">class </em><code class="descclassname">apirest.contact_serializers.</code><code class="descname">ContactSerializer</code><span class="sig-paren">(</span><em>instance=None</em>, <em>data=&lt;class rest_framework.fields.empty&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#apirest.contact_serializers.ContactSerializer" title="Permalink to this definition">¶</a></dt>
+<code class="descname">ContactSerializer</code><a class="headerlink" href="#apirest.contact_serializers.ContactSerializer" title="Permalink to this definition">¶</a></dt>
 <dd><p><strong>Create</strong>:</p>
 <blockquote>
 <div><p>CURL Usage:</p>
@@ -413,10 +417,10 @@ curl -u username:password -H &#39;Accept: application/json&#39; http://127.0.0.1
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="content_type_serializers.html" class="btn btn-neutral float-right" title="ContentTypeSerializer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="phonebook_serializers.html" class="btn btn-neutral float-right" title="Phonebook API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="cdr_serializers.html" class="btn btn-neutral" title="VoIPCallSerializer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../api-reference.html" class="btn btn-neutral" title="API Reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

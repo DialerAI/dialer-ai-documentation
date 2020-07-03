@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>SectionTemplateSerializer &mdash; DialerAI 6.5.9 documentation</title>
+  <title>SectionTemplateSerializer &mdash; DialerAI 6.5.18 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="SMSCampaignSerializer" href="sms_campaign_serializers.html" />
-    <link rel="prev" title="PhonebookSerializer" href="phonebook_serializers.html" /> 
+    <link rel="next" title="Branching Template API" href="branching_template_serializers.html" />
+    <link rel="prev" title="Survey Template API" href="survey_template_serializers.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -240,25 +240,29 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../api-reference.html">API Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="user_serializers.html"><cite>UserSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="userprofile_serializers.html"><cite>UserProfileSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="audiofile_serializers.html"><cite>AudioFileSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="branching_template_serializers.html"><cite>BranchingTemplateSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="campaign_serializers.html"><cite>CampaignSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="cdr_serializers.html"><cite>VoIPCallSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="contact_serializers.html"><cite>ContactSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="content_type_serializers.html"><cite>ContentTypeSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="dnc_serializers.html"><cite>DNCSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="dnc_contact_serializers.html"><cite>DNCContactSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="gateway_serializers.html"><cite>GatewaySerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="phonebook_serializers.html"><cite>PhonebookSerializer</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="contact_serializers.html"><cite>Contact API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="phonebook_serializers.html"><cite>Phonebook API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="campaign_serializers.html"><cite>Campaign API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="cdr_serializers.html"><cite>CDR API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="subscriber_list_serializers.html"><cite>SubscriberList API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_serializers.html"><cite>User API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dnc_serializers.html"><cite>DNC API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dnc_contact_serializers.html"><cite>DNCContact API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="gateway_serializers.html"><cite>Gateway API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="callcenter_config_serializers.html"><cite>Callcenter Config API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue_serializers.html"><cite>Queue API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="agent_serializers.html"><cite>Agent API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="survey_template_serializers.html"><cite>Survey Template API</cite></a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#"><cite>SectionTemplateSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="sms_campaign_serializers.html"><cite>SMSCampaignSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="sms_gateway_serializers.html"><cite>SMSGatewaySerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="subscriber_list_serializers.html"><cite>SubscriberListSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="survey_serializers.html"><cite>SurveySerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="survey_template_serializers.html"><cite>SurveyTemplateSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="payment_serializers.html"><cite>PaymentSerializer</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#section-template-api"><cite>Section Template API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="branching_template_serializers.html"><cite>Branching Template API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="survey_serializers.html"><cite>Survey API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="sms_campaign_serializers.html"><cite>SMS Campaign API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="sms_gateway_serializers.html"><cite>SMSGateway API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="payment_serializers.html"><cite>Payment API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="audiofile_serializers.html"><cite>Audio API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile_serializers.html"><cite>UserProfile API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_type_serializers.html"><cite>Content Type API</cite></a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../webhook.html">Webhook</a><ul>
@@ -335,7 +339,104 @@
 <span id="sectiontemplateserializer-model"></span><h1><cite>SectionTemplateSerializer</cite><a class="headerlink" href="#sectiontemplateserializer" title="Permalink to this headline">¶</a></h1>
 <dl class="class">
 <dt id="apirest.section_template_serializers.SectionTemplateSerializer">
-<em class="property">class </em><code class="descclassname">apirest.section_template_serializers.</code><code class="descname">SectionTemplateSerializer</code><span class="sig-paren">(</span><em>instance=None</em>, <em>data=&lt;class rest_framework.fields.empty&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#apirest.section_template_serializers.SectionTemplateSerializer" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="descname">SectionTemplateSerializer</code><span class="sig-paren">(</span><em>instance=None</em>, <em>data=&lt;class rest_framework.fields.empty&gt;</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#apirest.section_template_serializers.SectionTemplateSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p><strong>Create</strong>:</p>
+<blockquote>
+<div><p>CURL Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">--</span><span class="n">dump</span><span class="o">-</span><span class="n">header</span> <span class="o">-</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="o">--</span><span class="n">data</span> <span class="s1">&#39;{&quot;type&quot;: &quot;1&quot;, &quot;audiofile&quot;: &quot;/rest-api/audio-files/1/&quot;, &quot;question&quot;: &quot;survey que&quot;, &quot;survey&quot;: &quot;/rest-api/survey-template/1/&quot;, &quot;invalid_audiofile&quot;: &quot;/rest-api/audio-files/1/&quot;, &quot;queue&quot;: &quot;/rest-api/queue/1/&quot;}&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">section</span><span class="o">-</span><span class="n">template</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Response:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.0</span> <span class="mi">201</span> <span class="n">CREATED</span>
+<span class="n">Date</span><span class="p">:</span> <span class="n">Fri</span><span class="p">,</span> <span class="mi">14</span> <span class="n">Jun</span> <span class="mi">2013</span> <span class="mi">09</span><span class="p">:</span><span class="mi">52</span><span class="p">:</span><span class="mi">27</span> <span class="n">GMT</span>
+<span class="n">Server</span><span class="p">:</span> <span class="n">WSGIServer</span><span class="o">/</span><span class="mf">0.1</span> <span class="n">Python</span><span class="o">/</span><span class="mf">2.7</span><span class="o">.</span><span class="mi">3</span>
+<span class="n">Vary</span><span class="p">:</span> <span class="n">Accept</span><span class="p">,</span> <span class="n">Accept</span><span class="o">-</span><span class="n">Language</span><span class="p">,</span> <span class="n">Cookie</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span><span class="p">;</span> <span class="n">charset</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Language</span><span class="p">:</span> <span class="n">en</span><span class="o">-</span><span class="n">us</span>
+<span class="n">Location</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">section</span><span class="o">-</span><span class="n">template</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span>
+<span class="n">Allow</span><span class="p">:</span> <span class="n">GET</span><span class="p">,</span> <span class="n">POST</span><span class="p">,</span> <span class="n">HEAD</span><span class="p">,</span> <span class="n">OPTIONS</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Read</strong>:</p>
+<blockquote>
+<div><p>CURL Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Accept: application/json&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">section</span><span class="o">-</span><span class="n">template</span><span class="o">/</span>
+
+    <span class="ow">or</span>
+
+<span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Accept: application/json&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">section</span><span class="o">-</span><span class="n">template</span><span class="o">/%</span><span class="n">section</span><span class="o">-</span><span class="n">template</span><span class="o">-</span><span class="nb">id</span><span class="o">%/</span>
+</pre></div>
+</div>
+<p>Response:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;next&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;previous&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://HOSTNAME_IP/rest-api/section-template/1/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;order&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;type&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;question&quot;</span><span class="p">:</span> <span class="s2">&quot;this is test question&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;script&quot;</span><span class="p">:</span> <span class="s2">&quot;this is test question&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;audiofile&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;retries&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+            <span class="s2">&quot;key_0&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;key_1&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;key_2&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;key_3&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;key_4&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;key_5&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;key_6&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;key_7&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;key_8&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;key_9&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;rating_laps&quot;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+            <span class="s2">&quot;validate_number&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+            <span class="s2">&quot;number_digits&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="s2">&quot;min_number&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s2">&quot;max_number&quot;</span><span class="p">:</span> <span class="mi">99</span><span class="p">,</span>
+            <span class="s2">&quot;phonenumber&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;conference&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;completed&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
+            <span class="s2">&quot;queue&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;created_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-01-13T12:42:28.457&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;updated_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-01-13T12:42:28.511&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;survey&quot;</span><span class="p">:</span> <span class="s2">&quot;http://HOSTNAME_IP/rest-api/survey-template/1/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;invalid_audiofile&quot;</span><span class="p">:</span> <span class="n">null</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Update</strong>:</p>
+<blockquote>
+<div><p>CURL Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">--</span><span class="n">dump</span><span class="o">-</span><span class="n">header</span> <span class="o">-</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="o">-</span><span class="n">X</span> <span class="n">PATCH</span> <span class="o">--</span><span class="n">data</span> <span class="s1">&#39;{&quot;type&quot;: &quot;1&quot;, &quot;question&quot;: &quot;survey que&quot;, &quot;survey&quot;: &quot;/rest-api/survey-template/1/&quot;, &quot;invalid_audiofile&quot;: &quot;/rest-api/audio-files/1/&quot;}&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">section</span><span class="o">-</span><span class="n">template</span><span class="o">/%</span><span class="n">section</span><span class="o">-</span><span class="n">template</span><span class="o">-</span><span class="nb">id</span><span class="o">%/</span>
+</pre></div>
+</div>
+<p>Response:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.0</span> <span class="mi">202</span> <span class="n">NO</span> <span class="n">CONTENT</span>
+<span class="n">Date</span><span class="p">:</span> <span class="n">Fri</span><span class="p">,</span> <span class="mi">23</span> <span class="n">Sep</span> <span class="mi">2011</span> <span class="mi">06</span><span class="p">:</span><span class="mi">46</span><span class="p">:</span><span class="mi">12</span> <span class="n">GMT</span>
+<span class="n">Server</span><span class="p">:</span> <span class="n">WSGIServer</span><span class="o">/</span><span class="mf">0.1</span> <span class="n">Python</span><span class="o">/</span><span class="mf">2.7</span><span class="o">.</span><span class="mi">1</span><span class="o">+</span>
+<span class="n">Vary</span><span class="p">:</span> <span class="n">Accept</span><span class="o">-</span><span class="n">Language</span><span class="p">,</span> <span class="n">Cookie</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span> <span class="mi">0</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">text</span><span class="o">/</span><span class="n">html</span><span class="p">;</span> <span class="n">charset</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
+<span class="n">Content</span><span class="o">-</span><span class="n">Language</span><span class="p">:</span> <span class="n">en</span><span class="o">-</span><span class="n">us</span>
+</pre></div>
+</div>
+</div></blockquote>
+</dd></dl>
+
+</div>
+<div class="section" id="section-template-api">
+<h1><cite>Section Template API</cite><a class="headerlink" href="#section-template-api" title="Permalink to this headline">¶</a></h1>
+<dl class="data">
+<dt>
+<code class="descname">SectionTemplateSerializer</code></dt>
 <dd><p><strong>Create</strong>:</p>
 <blockquote>
 <div><p>CURL Usage:</p>
@@ -438,10 +539,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="sms_campaign_serializers.html" class="btn btn-neutral float-right" title="SMSCampaignSerializer" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="branching_template_serializers.html" class="btn btn-neutral float-right" title="Branching Template API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="phonebook_serializers.html" class="btn btn-neutral" title="PhonebookSerializer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="survey_template_serializers.html" class="btn btn-neutral" title="Survey Template API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
