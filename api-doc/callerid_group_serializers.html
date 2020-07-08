@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Survey API &mdash; DialerAI 6.5.21 documentation</title>
+  <title>CallerID Group API &mdash; DialerAI 6.5.21 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="SMS Campaign API" href="sms_campaign_serializers.html" />
-    <link rel="prev" title="Branching Template API" href="branching_template_serializers.html" /> 
+    <link rel="next" title="Gateway API" href="gateway_serializers.html" />
+    <link rel="prev" title="CallerID API" href="callerid_serializers.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -249,7 +249,7 @@
 <li class="toctree-l2"><a class="reference internal" href="dnc_serializers.html"><cite>DNC API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="dnc_contact_serializers.html"><cite>DNCContact API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="callerid_serializers.html"><cite>CallerID API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="callerid_group_serializers.html"><cite>CallerID Group API</cite></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#"><cite>CallerID Group API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="gateway_serializers.html"><cite>Gateway API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="callcenter_config_serializers.html"><cite>Callcenter Config API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="queue_serializers.html"><cite>Queue API</cite></a></li>
@@ -258,7 +258,7 @@
 <li class="toctree-l2"><a class="reference internal" href="section_template_serializers.html"><cite>SectionTemplateSerializer</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="section_template_serializers.html#section-template-api"><cite>Section Template API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="branching_template_serializers.html"><cite>Branching Template API</cite></a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#"><cite>Survey API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="survey_serializers.html"><cite>Survey API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="sms_campaign_serializers.html"><cite>SMS Campaign API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="sms_gateway_serializers.html"><cite>SMSGateway API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="payment_serializers.html"><cite>Payment API</cite></a></li>
@@ -319,7 +319,7 @@
         
           <li><a href="../api-reference.html">API Reference</a> &raquo;</li>
         
-      <li><cite>Survey API</cite></li>
+      <li><cite>CallerID Group API</cite></li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -337,34 +337,39 @@
            <div itemprop="articleBody">
             
 
-    <span class="target" id="module-apirest.survey_serializers"></span><div class="section" id="survey-api">
-<span id="surveyserializer-model"></span><h1><cite>Survey API</cite><a class="headerlink" href="#survey-api" title="Permalink to this headline">¶</a></h1>
+    <span class="target" id="module-apirest.callerid_group_serializers"></span><div class="section" id="callerid-group-api">
+<span id="calleridgroupserializer-model"></span><h1><cite>CallerID Group API</cite><a class="headerlink" href="#callerid-group-api" title="Permalink to this headline">¶</a></h1>
 <dl class="data">
-<dt id="apirest.survey_serializers.SurveySerializer">
-<code class="descname">SurveySerializer</code><a class="headerlink" href="#apirest.survey_serializers.SurveySerializer" title="Permalink to this definition">¶</a></dt>
-<dd><p><strong>Read</strong>:</p>
+<dt id="apirest.callerid_group_serializers.CallerIDGroupSerializer">
+<code class="descname">CallerIDGroupSerializer</code><a class="headerlink" href="#apirest.callerid_group_serializers.CallerIDGroupSerializer" title="Permalink to this definition">¶</a></dt>
+<dd><p>CallerIDGroup API is read only, you cannot create CallerIDGroup using this API at the moment.</p>
+<p><strong>Read</strong>:</p>
 <blockquote>
 <div><p>CURL Usage:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Accept: application/json&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">sealed</span><span class="o">-</span><span class="n">survey</span><span class="o">/</span>
-
-    <span class="ow">or</span>
-
-<span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Accept: application/json&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">sealed</span><span class="o">-</span><span class="n">survey</span><span class="o">/%</span><span class="n">sealed_survey_id</span><span class="o">%/</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Accept: application/json&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">callerid_group</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>Response:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
     <span class="s2">&quot;next&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
     <span class="s2">&quot;previous&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
     <span class="s2">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
-            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://HOSTNAME_IP/rest-api/sealed-survey/1/&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Sample survey campaign&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;created_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-01-13T12:42:18.148&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;updated_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-01-13T12:42:31.527&quot;</span><span class="p">,</span>
-            <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;http://HOSTNAME_IP/rest-api/users/1/&quot;</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:8000/rest-api/callerid_group/2/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;CIDGroup-01&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;created_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-08-08T16:01:54.358902+02:00&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;updated_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-08-08T16:01:54.358924+02:00&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:8000/rest-api/users/2/&quot;</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:8000/rest-api/callerid_group/3/&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;CIDGroup&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;created_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-20T10:37:58.346277+02:00&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;updated_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-09-20T10:37:58.346317+02:00&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:8000/rest-api/users/1/&quot;</span>
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>
@@ -384,10 +389,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="sms_campaign_serializers.html" class="btn btn-neutral float-right" title="SMS Campaign API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="gateway_serializers.html" class="btn btn-neutral float-right" title="Gateway API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="branching_template_serializers.html" class="btn btn-neutral" title="Branching Template API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="callerid_serializers.html" class="btn btn-neutral" title="CallerID API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

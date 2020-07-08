@@ -248,6 +248,8 @@
 <li class="toctree-l2"><a class="reference internal" href="user_serializers.html"><cite>User API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="dnc_serializers.html"><cite>DNC API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="dnc_contact_serializers.html"><cite>DNCContact API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="callerid_serializers.html"><cite>CallerID API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="callerid_group_serializers.html"><cite>CallerID Group API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="gateway_serializers.html"><cite>Gateway API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="callcenter_config_serializers.html"><cite>Callcenter Config API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="queue_serializers.html"><cite>Queue API</cite></a></li>
@@ -341,6 +343,7 @@
 <dt id="apirest.agent_serializers.AgentSerializer">
 <code class="descname">AgentSerializer</code><a class="headerlink" href="#apirest.agent_serializers.AgentSerializer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Agent API is read only, you cannot create Agents using this API at the moment.</p>
+<p><strong>status</strong>: Status could have the following values [1: ‘Logged Out’, 2: ‘Available’,  3: ‘On Standby’ &amp; 4: ‘On Break’]</p>
 <p><strong>Read</strong>:</p>
 <blockquote>
 <div><p>CURL Usage:</p>
