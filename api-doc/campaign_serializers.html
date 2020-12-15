@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Campaign API &mdash; DialerAI 7.3.0 documentation</title>
+  <title>Campaign API &mdash; DialerAI 7.5.2 documentation</title>
   
 
   
@@ -124,6 +124,8 @@
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/survey-nodes.html#sms-message">SMS Message</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/survey-nodes.html#call-transfer">Call Transfer</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/survey-nodes.html#http-api">HTTP API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../user-guide/survey-nodes.html#http-api-async-non-blocking">HTTP API Async (Non Blocking)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../user-guide/survey-nodes.html#asr-speech-recognition">ASR (Speech Recognition)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/survey-nodes.html#survey-branching">Survey Branching</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/survey-nodes.html#uploading-audio-files">Uploading Audio Files</a></li>
 </ul>
@@ -152,6 +154,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/sms-campaign.html#reporting">Reporting</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/inbound.html">Inbound Calling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../user-guide/inbound.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../user-guide/inbound.html#did-configuration">DID Configuration</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../user-guide/inbound.html#inbound-campaign">Inbound Campaign</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../user-guide/reports.html">Reports</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/reports.html#call-detail-reports-cdr">Call Detail Reports (CDR)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/reports.html#survey-reports">Survey Reports</a></li>
@@ -165,6 +173,13 @@
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/dashboard.html#sms-dashboard">SMS Dashboard</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/customer_faq.html">Customer FAQ</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../user-guide/customer_faq.html#campaign-won-t-start">Campaign won’t start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../user-guide/customer_faq.html#i-ve-edited-the-survey-but-changes-aren-t-applied-to-my-running-campaign">I’ve Edited the Survey, but Changes Aren’t Applied to my Running Campaign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../user-guide/customer_faq.html#i-ve-started-the-campaign-but-it-s-not-made-any-calls">I’ve started the campaign, but it’s not made any calls.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../user-guide/customer_faq.html#i-want-to-call-my-contacts-at-sociable-times-across-multiple-time-zones">I Want to Call my Contacts at Sociable Times Across Multiple Time Zones.</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../user-guide/call-center.html">Call-Center</a><ul>
@@ -175,8 +190,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/call-center.html#short-codes">Short Codes</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../user-guide/call-center.html#queue">3. Queue</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user-guide/call-center.html#callcenter-campaign">4. Callcenter Campaign</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/call-center.html#transfer-list">3. Transfer List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/call-center.html#call-center-config">4. Call-Center Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/call-center.html#agent-s-lead-dispostions">5. Agent’s Lead Dispostions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../user-guide/call-center.html#outbound-calling">Outbound Calling</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/call-center.html#queue">6. Queue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/call-center.html#callcenter-campaign">7. Callcenter Campaign</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/call-center.html#tab-general-settings">Tab general settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/call-center.html#tab-dialer-settings">Tab dialer settings</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/call-center.html#tab-retry-settings">Tab retry settings</a></li>
@@ -185,9 +206,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../user-guide/call-center.html#tab-extra-settings">Tab extra settings</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../user-guide/call-center.html#use-queue-within-an-ivr">5. Use Queue within an IVR</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user-guide/call-center.html#regulating-calls-according-to-agents-available">6. Regulating Calls According to Agents available</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../user-guide/call-center.html#reporting">7. Reporting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/call-center.html#use-queue-within-an-ivr">8. Use Queue within an IVR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/call-center.html#regulating-calls-according-to-agents-available">9. Regulating Calls According to Agents available</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../user-guide/call-center.html#reporting">10. Reporting</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../admin-guide.html">Admin Guide</a><ul>
@@ -471,19 +492,6 @@ The <cite>object_id</cite> is the survey template ID that you can find in your M
 </div>
 <p>CURL Usage (Update Campaign Status==Started):</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">--</span><span class="n">dump</span><span class="o">-</span><span class="n">header</span> <span class="o">-</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="o">-</span><span class="n">X</span> <span class="n">PATCH</span> <span class="o">--</span><span class="n">data</span> <span class="s1">&#39;{&quot;status&quot;: 1}&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">campaigns</span><span class="o">/%</span><span class="n">campaign</span><span class="o">-</span><span class="nb">id</span><span class="o">%/</span>
-</pre></div>
-</div>
-</div></blockquote>
-<p><strong>Delete</strong>:</p>
-<blockquote>
-<div><p>CURL Usage:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">--</span><span class="n">dump</span><span class="o">-</span><span class="n">header</span> <span class="o">-</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="o">-</span><span class="n">X</span> <span class="n">DELETE</span>  <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">campaign</span><span class="o">/%</span><span class="n">campaign_id</span><span class="o">%/</span>
-</pre></div>
-</div>
-<p>Response:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;data&quot;</span><span class="p">:</span> <span class="s2">&quot;campaign deleted&quot;</span>
-<span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
