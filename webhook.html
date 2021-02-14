@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Webhook &mdash; DialerAI 7.6.0 documentation</title>
+  <title>Webhook &mdash; DialerAI 7.6.9 documentation</title>
   
 
   
@@ -279,6 +279,16 @@
 </li>
 </ul>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="gateway-config.html">Setting up VoIP Telecoms Carriers</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gateway-config.html#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gateway-config.html#terms-and-conditions">Terms and Conditions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gateway-config.html#voxtelesys">Voxtelesys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gateway-config.html#twilio">Twilio</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gateway-config.html#telnyx">Telnyx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gateway-config.html#voxbeam">Voxbeam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gateway-config.html#vitelity-inteliquent">Vitelity / Inteliquent</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="api-reference.html">API Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api-doc/contact_serializers.html"><cite>Contact API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="api-doc/phonebook_serializers.html"><cite>Phonebook API</cite></a></li>
@@ -380,6 +390,9 @@
 <span id="id1"></span><h1>Webhook<a class="headerlink" href="#webhook" title="Permalink to this headline">¶</a></h1>
 <p>A webhook can be configured in order to push CDRs to your own platform or API endpoint. When a new CDR is created on our system, a POST request will be sent with the CDR details.
 This is used when you either need to keep information about the call being made or to activate an application after a dial or an inbound call is made.</p>
+<p>On installation, the webhook is not enabled by default. If it’s to be used, check it’s enabled.</p>
+<p>An Endpoint needs to be configured where the CDR are going to be submitted at <a class="reference external" href="https://HOSTNAME/admin/user_profile/staff/1/change/">https://HOSTNAME/admin/user_profile/staff/1/change/</a>. Put the URL that you want to use in the ‘Webhook Endpoint’ field</p>
+<img alt="_images/admin-create-webhookendpoint.png" src="_images/admin-create-webhookendpoint.png" />
 <p>The Webhook comes with a UI on the admin, <a class="reference external" href="https://HOSTNAME/admin/webhook/webhook/">https://HOSTNAME/admin/webhook/webhook/</a> and it has a retry mechanism, which ensures that CDRs are pushed correctly.
 If there is an error, for instance your endpoint didn’t accept the API call, it will be displayed on the UI.</p>
 <a class="reference internal image-reference" href="_images/admin-webhookcdr.png"><img alt="_images/admin-webhookcdr.png" src="_images/admin-webhookcdr.png" style="width: 700px;" /></a>
