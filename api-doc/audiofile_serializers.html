@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Audio API &mdash; DialerAI 7.6.17 documentation</title>
+  <title>Audio API &mdash; DialerAI 7.8.2 documentation</title>
   
 
   
@@ -317,6 +317,14 @@
 <li class="toctree-l2"><a class="reference internal" href="userprofile_serializers.html"><cite>UserProfile API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="content_type_serializers.html"><cite>Content Type API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="did_serializers.html"><cite>DID API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_create_survey_campaign_via_api.html">How to create an IVR/Survey via API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#upload-an-audio-via-api">1) Upload an audio Via API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-survey-template">2) Create a Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-section-into-your-survey-template">3) Create a Section into your Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-campaign-for-the-previous-created-survey-template">4) Create a campaign for the previous created Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#start-the-campaign-via-api">5) Start the campaign via API</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../webhook.html">Webhook</a><ul>
@@ -420,6 +428,12 @@
 <span class="p">}</span>
 </pre></div>
 </div>
+</div></blockquote>
+<p><strong>Create</strong>:</p>
+<blockquote>
+<div><p>CURL Usage:</p>
+<blockquote>
+<div>curl -u username:password -H ‘Accept: application/json’ –request POST http://HOSTNAME_IP/rest-api/audio-files/                 –form ‘name=”audio created from API”’                 –form ‘audio_file=&#64;”/path/duck01.wav”’                 –form ‘user_id=”1”’</div></blockquote>
 </div></blockquote>
 </dd></dl>
 

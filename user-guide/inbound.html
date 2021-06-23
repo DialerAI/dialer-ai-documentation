@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Inbound Calling &mdash; DialerAI 7.6.17 documentation</title>
+  <title>Inbound Calling &mdash; DialerAI 7.8.2 documentation</title>
   
 
   
@@ -317,6 +317,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../api-doc/userprofile_serializers.html"><cite>UserProfile API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api-doc/content_type_serializers.html"><cite>Content Type API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="../api-doc/did_serializers.html"><cite>DID API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html">How to create an IVR/Survey via API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html#upload-an-audio-via-api">1) Upload an audio Via API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html#create-a-survey-template">2) Create a Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html#create-a-section-into-your-survey-template">3) Create a Section into your Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html#create-a-campaign-for-the-previous-created-survey-template">4) Create a campaign for the previous created Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html#start-the-campaign-via-api">5) Start the campaign via API</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../webhook.html">Webhook</a><ul>
@@ -412,14 +420,18 @@
 <h2><a class="toc-backref" href="#id2">DID Configuration</a><a class="headerlink" href="#did-configuration" title="Permalink to this headline">¶</a></h2>
 <p>DID need to be initially configured by the Dialer Adminstrator, added and pointed to the tenant at <a class="reference external" href="http://HOSTNAME_IP/admin/inbound/did/">http://HOSTNAME_IP/admin/inbound/did/</a></p>
 <img alt="../_images/inbound_did_config.png" src="../_images/inbound_did_config.png" />
+<p>To match all DID and send them to the same destination to avoid having to enter every DID manually, the keyword “MATCH_ALL_DID” can be used in place of the DID number.</p>
+<p>The DID number should be entered exactly as delivered from the carrier.</p>
+<p>DID can also be uploaded from a CSV file in the format:-&nbsp;<em>did_number, user, campaign</em> - Therefore each entry will appear as one of the following:</p>
+<p><strong>12024648397,,</strong> <em>(If you are just importing the number (note the 2 commas)</em>.</p>
+<p><strong>12024648397,1,</strong> <em>(If you are importing the number and assigning it to userID 1, root)</em></p>
+<p><strong>12024648397,1,38</strong> <em>(If you want to import the number, Assign it to root, and set the inbound DID for inbound Campaign ID 38)</em></p>
 <p>Once the DID has been directed to the tenant, then it can be configured by them in the Inbound Menu.</p>
 </div>
 <div class="section" id="inbound-campaign">
 <h2><a class="toc-backref" href="#id3">Inbound Campaign</a><a class="headerlink" href="#inbound-campaign" title="Permalink to this headline">¶</a></h2>
 <p>A DID is directed to an inbound campaign configured in the Tenant’s user interface.</p>
 <img alt="../_images/inbound_campaign.png" src="../_images/inbound_campaign.png" />
-<p>The DID number should be entered exactly as delivered from the carrier.</p>
-<p>To match all DID and send them to the same destination to avoid having to enter every DID manually, the keyword “MATCH_ALL_DID” can be used in place of the DID number.</p>
 <p>Calls can be sent to</p>
 <ul class="simple">
 <li>A Survey / IVR which has already been configured in the survey section</li>

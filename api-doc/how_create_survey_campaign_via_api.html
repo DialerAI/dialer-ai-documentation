@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Setting up Microsoft Azure Speech-to-Text (ASR) &mdash; DialerAI 7.8.2 documentation</title>
+  <title>How to create an IVR/Survey via API &mdash; DialerAI 7.8.2 documentation</title>
   
 
   
@@ -28,8 +28,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Setting up VoIP Telecoms Carriers" href="../gateway-config.html" />
-    <link rel="prev" title="Setting up Microsoft Azure Text-to-Speech (TTS)" href="microsoft-tts.html" /> 
+    <link rel="next" title="Webhook" href="../webhook.html" />
+    <link rel="prev" title="DID API" href="did_serializers.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -78,7 +78,7 @@
               
             
             
-              <ul class="current">
+              <ul>
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html#overview">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html#utility">Utility</a></li>
@@ -231,7 +231,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../admin-guide.html">Admin Guide</a><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../admin-guide.html">Admin Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../admin-guide/SMS-config.html">SMS Configuration</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../admin-guide/SMS-config.html#configuration">Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../admin-guide/SMS-config.html#messages">Messages</a></li>
@@ -271,15 +271,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../admin-guide/admin-panel.html#voip-call-report">VoIP Call Report</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="advanced-configuration-guide.html">Advanced</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="microsoft-tts.html">Setting up Microsoft Azure Text-to-Speech (TTS)</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Setting up Microsoft Azure Speech-to-Text (ASR)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-configuration/advanced-configuration-guide.html">Advanced</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-configuration/microsoft-tts.html">Setting up Microsoft Azure Text-to-Speech (TTS)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-configuration/microsoft-asr.html">Setting up Microsoft Azure Speech-to-Text (ASR)</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../gateway-config.html">Setting up VoIP Telecoms Carriers</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../gateway-config.html#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gateway-config.html#terms-and-conditions">Terms and Conditions</a></li>
@@ -290,39 +290,39 @@
 <li class="toctree-l2"><a class="reference internal" href="../gateway-config.html#vitelity-inteliquent">Vitelity / Inteliquent</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../api-reference.html">API Reference</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/contact_serializers.html"><cite>Contact API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/phonebook_serializers.html"><cite>Phonebook API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/campaign_serializers.html"><cite>Campaign API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/cdr_serializers.html"><cite>CDR API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/subscriber_list_serializers.html"><cite>SubscriberList API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/user_serializers.html"><cite>User API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/dnc_serializers.html"><cite>DNC API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/dnc_contact_serializers.html"><cite>DNCContact API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/callerid_serializers.html"><cite>CallerID API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/callerid_group_serializers.html"><cite>CallerID Group API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/gateway_serializers.html"><cite>Gateway API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/callcenter_config_serializers.html"><cite>Callcenter Config API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/queue_serializers.html"><cite>Queue API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/agent_serializers.html"><cite>Agent API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/survey_template_serializers.html"><cite>Survey Template API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/section_template_serializers.html"><cite>SectionTemplateSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/section_template_serializers.html#section-template-api"><cite>Section Template API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/branching_template_serializers.html"><cite>Branching Template API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/survey_serializers.html"><cite>Survey API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/sms_campaign_serializers.html"><cite>SMS Campaign API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/sms_gateway_serializers.html"><cite>SMSGateway API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/payment_serializers.html"><cite>Payment API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/audiofile_serializers.html"><cite>Audio API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/userprofile_serializers.html"><cite>UserProfile API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/content_type_serializers.html"><cite>Content Type API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/did_serializers.html"><cite>DID API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html">How to create an IVR/Survey via API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html#upload-an-audio-via-api">1) Upload an audio Via API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html#create-a-survey-template">2) Create a Survey Template</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html#create-a-section-into-your-survey-template">3) Create a Section into your Survey Template</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html#create-a-campaign-for-the-previous-created-survey-template">4) Create a campaign for the previous created Survey Template</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html#start-the-campaign-via-api">5) Start the campaign via API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api-reference.html">API Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="contact_serializers.html"><cite>Contact API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="phonebook_serializers.html"><cite>Phonebook API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="campaign_serializers.html"><cite>Campaign API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="cdr_serializers.html"><cite>CDR API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="subscriber_list_serializers.html"><cite>SubscriberList API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="user_serializers.html"><cite>User API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dnc_serializers.html"><cite>DNC API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="dnc_contact_serializers.html"><cite>DNCContact API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="callerid_serializers.html"><cite>CallerID API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="callerid_group_serializers.html"><cite>CallerID Group API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="gateway_serializers.html"><cite>Gateway API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="callcenter_config_serializers.html"><cite>Callcenter Config API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="queue_serializers.html"><cite>Queue API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="agent_serializers.html"><cite>Agent API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="survey_template_serializers.html"><cite>Survey Template API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="section_template_serializers.html"><cite>SectionTemplateSerializer</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="section_template_serializers.html#section-template-api"><cite>Section Template API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="branching_template_serializers.html"><cite>Branching Template API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="survey_serializers.html"><cite>Survey API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="sms_campaign_serializers.html"><cite>SMS Campaign API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="sms_gateway_serializers.html"><cite>SMSGateway API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="payment_serializers.html"><cite>Payment API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="audiofile_serializers.html"><cite>Audio API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="userprofile_serializers.html"><cite>UserProfile API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="content_type_serializers.html"><cite>Content Type API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="did_serializers.html"><cite>DID API</cite></a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">How to create an IVR/Survey via API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#upload-an-audio-via-api">1) Upload an audio Via API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-survey-template">2) Create a Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-section-into-your-survey-template">3) Create a Section into your Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-campaign-for-the-previous-created-survey-template">4) Create a campaign for the previous created Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#start-the-campaign-via-api">5) Start the campaign via API</a></li>
 </ul>
 </li>
 </ul>
@@ -377,11 +377,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../admin-guide.html">Admin Guide</a> &raquo;</li>
+          <li><a href="../api-reference.html">API Reference</a> &raquo;</li>
         
-          <li><a href="advanced-configuration-guide.html">Advanced</a> &raquo;</li>
-        
-      <li>Setting up Microsoft Azure Speech-to-Text (ASR)</li>
+      <li>How to create an IVR/Survey via API</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -399,32 +397,118 @@
            <div itemprop="articleBody">
             
 
-    <div class="section" id="setting-up-microsoft-azure-speech-to-text-asr">
-<span id="microsoft-asr"></span><h1>Setting up Microsoft Azure Speech-to-Text (ASR)<a class="headerlink" href="#setting-up-microsoft-azure-speech-to-text-asr" title="Permalink to this headline">¶</a></h1>
-<p>For Speech-to-Text (ASR) sign up to Microsoft Azure, <a class="reference external" href="https://azure.microsoft.com/en-us/services/cognitive-services/speech/">https://azure.microsoft.com/en-us/services/cognitive-services/speech/</a>, when you set up the ASR, make sure you choose eastus, we will need the API key that they provide when you add this service.</p>
-<ol class="arabic simple">
-<li>First step is to connect on the Azure portal and search for <cite>Cognitive Services</cite></li>
-</ol>
-<img alt="../_images/ms-asr-1.png" src="../_images/ms-asr-1.png" />
-<ol class="arabic simple" start="2">
-<li>Now click <cite>Create</cite></li>
-</ol>
-<img alt="../_images/ms-asr-2.png" src="../_images/ms-asr-2.png" />
-<p>3. Give your new service a name and select East-US location. If this can’t be selected, select another and let us know which one you chose.
-Also, create a resource group.</p>
-<img alt="../_images/ms-asr-3.png" src="../_images/ms-asr-3.png" />
-<ol class="arabic simple" start="4">
-<li>This might take a minute or two, then your deployment will be complete.</li>
-</ol>
-<img alt="../_images/ms-asr-4.png" src="../_images/ms-asr-4.png" />
-<ol class="arabic simple" start="5">
-<li>Click, <cite>Go To Resource</cite>.</li>
-</ol>
-<img alt="../_images/ms-asr-5.png" src="../_images/ms-asr-5.png" />
-<ol class="arabic simple" start="6">
-<li>Copy the contents of <cite>Key 1</cite> and send it to us. This key will be used to connect your account with the speech recognition services you have just created.</li>
-</ol>
-<p>Make sure there is a payment source with Azure to cover any costs you incur.</p>
+    <div class="section" id="how-to-create-an-ivr-survey-via-api">
+<span id="id1"></span><h1>How to create an IVR/Survey via API<a class="headerlink" href="#how-to-create-an-ivr-survey-via-api" title="Permalink to this headline">¶</a></h1>
+<p>We will explain how to create a Campaign, a Survey-Template &amp; an Audio only via the API.</p>
+<p>It’s similar to what we do on the webUI, which you can find here <a class="reference external" href="http://HOSTNAME_IP/module/survey/">http://HOSTNAME_IP/module/survey/</a>
+on your UI. Therefore, make sure to be familiar with this first.</p>
+<p>Firstly we will upload an audio, then create a Survey Template, then add a Section to this
+Survey template that will play a message and finally create a campaign with that Survey Template.</p>
+<p>Altogether, there is 5 points to follow:</p>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#upload-an-audio-via-api" id="id2">1) Upload an audio Via API</a></li>
+<li><a class="reference internal" href="#create-a-survey-template" id="id3">2) Create a Survey Template</a></li>
+<li><a class="reference internal" href="#create-a-section-into-your-survey-template" id="id4">3) Create a Section into your Survey Template</a></li>
+<li><a class="reference internal" href="#create-a-campaign-for-the-previous-created-survey-template" id="id5">4) Create a campaign for the previous created Survey Template</a></li>
+<li><a class="reference internal" href="#start-the-campaign-via-api" id="id6">5) Start the campaign via API</a></li>
+</ul>
+</div>
+<p>Let’s now go through those 5 points in more details.</p>
+<div class="section" id="upload-an-audio-via-api">
+<h2><a class="toc-backref" href="#id2">1) Upload an audio Via API</a><a class="headerlink" href="#upload-an-audio-via-api" title="Permalink to this headline">¶</a></h2>
+<p>You can easily upload a new audio file with the following API/Curl command.</p>
+<p>CURL Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Accept: application/json&#39;</span> \
+<span class="o">--</span><span class="n">request</span> <span class="n">POST</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">audio</span><span class="o">-</span><span class="n">files</span><span class="o">/</span> \
+<span class="o">--</span><span class="n">form</span> <span class="s1">&#39;name=&quot;audio created from API&quot;&#39;</span> \
+<span class="o">--</span><span class="n">form</span> <span class="s1">&#39;audio_file=@&quot;/path/duck01.wav&quot;&#39;</span> \
+<span class="o">--</span><span class="n">form</span> <span class="s1">&#39;user_id=&quot;1&quot;&#39;</span>
+</pre></div>
+</div>
+<p>The result should be similar to this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;audio-via-API&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;audio_file&quot;</span><span class="p">:</span> <span class="s2">&quot;/usermedia/upload/audiofiles/duck01.wav&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;user_id&quot;</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Keep the id, that will be your <cite>audio-ID</cite> for later.</p>
+</div>
+<div class="section" id="create-a-survey-template">
+<h2><a class="toc-backref" href="#id3">2) Create a Survey Template</a><a class="headerlink" href="#create-a-survey-template" title="Permalink to this headline">¶</a></h2>
+<p>We will create a survey template via API, this is similar to create the survey template
+here <a class="reference external" href="http://HOSTNAME_IP/module/survey/add/">http://HOSTNAME_IP/module/survey/add/</a></p>
+<p>CURL Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">--</span><span class="n">dump</span><span class="o">-</span><span class="n">header</span> <span class="o">-</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="o">--</span><span class="n">data</span> <span class="s1">&#39;{&quot;name&quot;: &quot;Survey created from API&quot;}&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">survey</span><span class="o">-</span><span class="n">template</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Result:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:8000/rest-api/survey-template/27/&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Survey created from API&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span><span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;created_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-06-19T20:34:47.283180+02:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;updated_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-06-19T20:34:47.283199+02:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:8000/rest-api/users/1/&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You should get a result similar to the above, you can extract the Survey-Template-ID from the
+result url data. (eg. “url”: “<a class="reference external" href="http://127.0.0.1:8000/rest-api/survey-template/27/">http://127.0.0.1:8000/rest-api/survey-template/27/</a>”, the ID is 27)</p>
+<p>That <cite>survey-template-ID</cite> will then need to be used when you create the section &amp; also the Campaign.</p>
+</div>
+<div class="section" id="create-a-section-into-your-survey-template">
+<h2><a class="toc-backref" href="#id4">3) Create a Section into your Survey Template</a><a class="headerlink" href="#create-a-section-into-your-survey-template" title="Permalink to this headline">¶</a></h2>
+<p>You have created a Survey Template at the moment it’s empty, as you can see on the UI.</p>
+<p>You need to add at least one section for a Survey/IVR to make sense.
+This would be similar to adding a section from the webUI.</p>
+<p>Here the documentation about different type of section, <a class="reference internal" href="../user-guide/survey-nodes.html#survey-and-ivr-configuration"><span class="std std-ref">Survey &amp; IVR Configuration</span></a></p>
+<p>We will keep things simple here and we will create one section <cite>Play message</cite> (type 1),
+but it’s possible to create multiple sections and attach them with branching.</p>
+<p>Let’s now create a simple <cite>Play message</cite>.</p>
+<p>Here to create this via the API, you will need the <cite>audio-ID</cite> &amp; the <cite>survey-template-ID</cite> from before.</p>
+<p>Earlier our <cite>audio-ID</cite> was 25 and our <cite>survey-template-ID</cite> was 27.</p>
+<p>Create the Section-Template via API, as follow:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">--</span><span class="n">dump</span><span class="o">-</span><span class="n">header</span> <span class="o">-</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="o">--</span><span class="n">data</span> <span class="s1">&#39;{&quot;type&quot;: &quot;1&quot;, &quot;audiofile&quot;: &quot;/rest-api/audio-files/25/&quot;, &quot;question&quot;: &quot;Basic Message&quot;, &quot;survey&quot;: &quot;/rest-api/survey-template/27/&quot;}&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">section</span><span class="o">-</span><span class="n">template</span><span class="o">/</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-a-campaign-for-the-previous-created-survey-template">
+<h2><a class="toc-backref" href="#id5">4) Create a campaign for the previous created Survey Template</a><a class="headerlink" href="#create-a-campaign-for-the-previous-created-survey-template" title="Permalink to this headline">¶</a></h2>
+<p>Now it’s time to create a campaign, you must also have created a phonebook and imported contacts in that phonebook.</p>
+<p>Curl example to create a campaign with IVR/Survey:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">--</span><span class="n">dump</span><span class="o">-</span><span class="n">header</span> <span class="o">-</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="o">--</span><span class="n">data</span> <span class="s1">&#39;{&quot;name&quot;: &quot;campaign-via-api&quot;, &quot;description&quot;: &quot;&quot;, &quot;callerid&quot;: &quot;1239876&quot;, &quot;startingdate&quot;: &quot;2021-06-01 14:13:33&quot;, &quot;expirationdate&quot;: &quot;2022-08-30 13:13:33&quot;, &quot;frequency&quot;: &quot;100&quot;, &quot;max_aleg&quot;:100, &quot;max_xfer&quot;:10, &quot;dial_method&quot;:1, &quot;agent_dial_rate&quot;:1, &quot;callmaxduration&quot;: &quot;50&quot;, &quot;maxretry&quot;: &quot;1&quot;, &quot;intervalretry&quot;: &quot;3000&quot;, &quot;calltimeout&quot;: &quot;45&quot;, &quot;aleg_gateway&quot;: &quot;/rest-api/gateway/2/&quot;, &quot;sms_gateway&quot;: &quot;&quot;, &quot;object_id&quot; : &quot;27&quot;, &quot;extra_data&quot;: &quot;2000&quot;, &quot;voicemail&quot;: &quot;True&quot;, &quot;amd_behavior&quot;: &quot;1&quot;, &quot;voicemail_audiofile&quot;: &quot;&quot;, &quot;dnc&quot;: &quot;&quot;, &quot;user&quot;: &quot;/rest-api/users/1/&quot;, &quot;phonebook&quot;: [&quot;/rest-api/phonebook/1/&quot;], &quot;daily_start_time&quot;: &quot;00:00:00&quot;, &quot;daily_stop_time&quot;: &quot;23:59:59&quot;, &quot;callerid_group&quot;: &quot;/rest-api/callerid_group/1/&quot;}&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">campaigns</span><span class="o">/</span>
+</pre></div>
+</div>
+<p>Keep the id from the result, that is your <cite>Campaign-ID</cite>.</p>
+<p><strong>Parameters</strong>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>* The `name`, try to give a unique name to your campaign.
+</pre></div>
+</div>
+<ul class="simple">
+<li>The <cite>object_id</cite> parameter is the <cite>survey-template-ID</cite> that you can create earlier via API or via the WebUI.</li>
+<li>The <cite>aleg_gateway</cite> is the gateway that will be used, most of the time it will be the same one.</li>
+<li>You will notice more settings in the campaign APIs, if you have doubts feel free to ask us.</li>
+</ul>
+</div>
+<div class="section" id="start-the-campaign-via-api">
+<h2><a class="toc-backref" href="#id6">5) Start the campaign via API</a><a class="headerlink" href="#start-the-campaign-via-api" title="Permalink to this headline">¶</a></h2>
+<p>When a campaign is created via the API, the Campaign status is <cite>New</cite> at first.</p>
+<p>If you are ready and want to start your campaign, you can do so via the following update Campaign API, as follow:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">--</span><span class="n">dump</span><span class="o">-</span><span class="n">header</span> <span class="o">-</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="o">-</span><span class="n">X</span> <span class="n">PATCH</span> <span class="o">--</span><span class="n">data</span> <span class="s1">&#39;{&quot;status&quot;: 1}&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">campaigns</span><span class="o">/</span><span class="mi">175</span><span class="o">/</span>
+</pre></div>
+</div>
+<p><strong>Note:</strong> <cite>status: 1</cite> is for Started, now the system should start making calls.</p>
+<p>You can also stop or pause a campaign via this API.</p>
+<p>Here the different campaign value for status:
+* 1: START
+* 2: PAUSE
+* 3: ABORD
+* 4: END</p>
+</div>
 </div>
 
 
@@ -436,10 +520,10 @@ Also, create a resource group.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../gateway-config.html" class="btn btn-neutral float-right" title="Setting up VoIP Telecoms Carriers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../webhook.html" class="btn btn-neutral float-right" title="Webhook" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="microsoft-tts.html" class="btn btn-neutral" title="Setting up Microsoft Azure Text-to-Speech (TTS)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="did_serializers.html" class="btn btn-neutral" title="DID API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

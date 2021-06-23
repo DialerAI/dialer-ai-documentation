@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Survey Template API &mdash; DialerAI 7.6.17 documentation</title>
+  <title>Survey Template API &mdash; DialerAI 7.8.2 documentation</title>
   
 
   
@@ -317,6 +317,14 @@
 <li class="toctree-l2"><a class="reference internal" href="userprofile_serializers.html"><cite>UserProfile API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="content_type_serializers.html"><cite>Content Type API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="did_serializers.html"><cite>DID API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="how_create_survey_campaign_via_api.html">How to create an IVR/Survey via API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#upload-an-audio-via-api">1) Upload an audio Via API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-survey-template">2) Create a Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-section-into-your-survey-template">3) Create a Section into your Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-campaign-for-the-previous-created-survey-template">4) Create a campaign for the previous created Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#start-the-campaign-via-api">5) Start the campaign via API</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../webhook.html">Webhook</a><ul>
@@ -409,6 +417,15 @@
 <span class="n">Content</span><span class="o">-</span><span class="n">Language</span><span class="p">:</span> <span class="n">en</span><span class="o">-</span><span class="n">us</span>
 <span class="n">Location</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">survey</span><span class="o">-</span><span class="n">template</span><span class="o">/</span><span class="mi">1</span><span class="o">/</span>
 <span class="n">Allow</span><span class="p">:</span> <span class="n">GET</span><span class="p">,</span> <span class="n">POST</span><span class="p">,</span> <span class="n">HEAD</span><span class="p">,</span> <span class="n">OPTIONS</span>
+
+<span class="p">{</span>
+    <span class="s2">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:8000/rest-api/survey-template/27/&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Survey created from API&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;description&quot;</span><span class="p">:</span><span class="n">null</span><span class="p">,</span>
+    <span class="s2">&quot;created_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-06-19T20:34:47.283180+02:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;updated_date&quot;</span><span class="p">:</span> <span class="s2">&quot;2021-06-19T20:34:47.283199+02:00&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;http://127.0.0.1:8000/rest-api/users/1/&quot;</span>
+<span class="p">}</span>
 </pre></div>
 </div>
 </div></blockquote>
