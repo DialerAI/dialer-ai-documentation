@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Campaign API &mdash; DialerAI 7.8.2 documentation</title>
+  <title>Campaign API &mdash; DialerAI 7.8.3 documentation</title>
   
 
   
@@ -318,10 +318,10 @@
 <li class="toctree-l2"><a class="reference internal" href="content_type_serializers.html"><cite>Content Type API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="did_serializers.html"><cite>DID API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="how_create_survey_campaign_via_api.html">How to create an IVR/Survey via API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#upload-an-audio-via-api">1) Upload an audio Via API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#upload-audio-via-api">1) Upload audio Via API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-survey-template">2) Create a Survey Template</a></li>
 <li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-section-into-your-survey-template">3) Create a Section into your Survey Template</a></li>
-<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-campaign-for-the-previous-created-survey-template">4) Create a campaign for the previous created Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-campaign-for-the-previously-created-survey-template">4) Create a campaign for the previously created Survey Template</a></li>
 <li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#start-the-campaign-via-api">5) Start the campaign via API</a></li>
 </ul>
 </li>
@@ -503,7 +503,15 @@ The <cite>object_id</cite> is the survey template ID that you can find in your M
             <span class="s2">&quot;xfer_phonenumber&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
             <span class="s2">&quot;has_been_started&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
             <span class="s2">&quot;has_been_duplicated&quot;</span><span class="p">:</span> <span class="n">false</span><span class="p">,</span>
-            <span class="s2">&quot;duplicated_from&quot;</span><span class="p">:</span> <span class="n">null</span>
+            <span class="s2">&quot;duplicated_from&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;callcenter_config&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;campaign_type&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="s2">&quot;api_available_agent&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
+            <span class="s2">&quot;get_progress_bar_values&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="s2">&quot;progress_string&quot;</span><span class="p">:</span> <span class="s2">&quot;7/8 contact(s) dialed! (Dialed:7; DNC:0; Unauthorized:0)&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;percentage&quot;</span><span class="p">:</span> <span class="s2">&quot;87.5%&quot;</span><span class="p">,</span>
+                <span class="s2">&quot;progress_classname&quot;</span><span class="p">:</span> <span class="s2">&quot;progress-bar progress-bar-success&quot;</span>
+            <span class="p">}</span>
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>

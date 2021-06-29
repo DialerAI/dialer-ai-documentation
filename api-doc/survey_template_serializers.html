@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Survey Template API &mdash; DialerAI 7.8.2 documentation</title>
+  <title>Survey Template API &mdash; DialerAI 7.8.3 documentation</title>
   
 
   
@@ -318,10 +318,10 @@
 <li class="toctree-l2"><a class="reference internal" href="content_type_serializers.html"><cite>Content Type API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="did_serializers.html"><cite>DID API</cite></a></li>
 <li class="toctree-l2"><a class="reference internal" href="how_create_survey_campaign_via_api.html">How to create an IVR/Survey via API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#upload-an-audio-via-api">1) Upload an audio Via API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#upload-audio-via-api">1) Upload audio Via API</a></li>
 <li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-survey-template">2) Create a Survey Template</a></li>
 <li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-section-into-your-survey-template">3) Create a Section into your Survey Template</a></li>
-<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-campaign-for-the-previous-created-survey-template">4) Create a campaign for the previous created Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-campaign-for-the-previously-created-survey-template">4) Create a campaign for the previously created Survey Template</a></li>
 <li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#start-the-campaign-via-api">5) Start the campaign via API</a></li>
 </ul>
 </li>
@@ -472,6 +472,13 @@
 <span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span> <span class="mi">0</span>
 <span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">text</span><span class="o">/</span><span class="n">html</span><span class="p">;</span> <span class="n">charset</span><span class="o">=</span><span class="n">utf</span><span class="o">-</span><span class="mi">8</span>
 <span class="n">Content</span><span class="o">-</span><span class="n">Language</span><span class="p">:</span> <span class="n">en</span><span class="o">-</span><span class="n">us</span>
+</pre></div>
+</div>
+</div></blockquote>
+<p><strong>Delete</strong>:</p>
+<blockquote>
+<div><p>CURL Usage:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">--</span><span class="n">dump</span><span class="o">-</span><span class="n">header</span> <span class="o">-</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Content-Type: application/json&quot;</span> <span class="o">-</span><span class="n">X</span> <span class="n">DELETE</span>  <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">survey</span><span class="o">-</span><span class="n">template</span><span class="o">/%</span><span class="n">survey</span><span class="o">-</span><span class="n">template</span><span class="o">-</span><span class="nb">id</span><span class="o">%/</span>
 </pre></div>
 </div>
 </div></blockquote>
