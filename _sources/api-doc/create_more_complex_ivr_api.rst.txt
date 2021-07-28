@@ -4,7 +4,7 @@ Create a complex IVR/Survey via API
 ====================================
 
 
-First, let's create a survey template via API, this is similar to creating the survey template
+First create a survey template via API, this is similar to creating the survey template
 on the webUI at http://HOSTNAME_IP/module/survey/add/
 
 
@@ -26,7 +26,7 @@ Result::
 You should get a result similar to the example note the Survey-Template-ID from the
 result url data. (eg. "url": "http://HOSTNAME_IP/rest-api/survey-template/29/", the ID is 29)
 
-That `survey-template-ID` will be used when you create the sections and the branchings.
+Note the `survey-template-ID`,it will be used when you create the sections and the branching.
 
 
 1) Create a Section into your Survey Template
@@ -34,14 +34,14 @@ That `survey-template-ID` will be used when you create the sections and the bran
 
 So far, you have created a Survey Template. At the moment it's empty, as you can see on the UI.
 
-The documentation about different type of sections is at, :ref:`survey_and_ivr_configuration`
+The documentation for different types of section is at, :ref:`survey_and_ivr_configuration`
 
-Here we will create:
+We will create as an example:
 * a) `Multi-choice` (section type 2) to offer 2 options with some branching
 * b) `Play message` (section type 1) with simple message
 * c) `API` (section type 11) which will send an API request.
 
-Here the list of section type for reference::
+Here is a list of section types for reference::
 
     PLAY_MESSAGE = 1
     MULTI_CHOICE = 2
@@ -65,22 +65,22 @@ All the API calls will return a result which will contain the section-template I
     {"url":"http://HOSTNAME_IP/rest-api/section-template/75/", ...
 
 
-a) First, let's create a `Multi-Choice` Section-Template, as follows::
+a) First, create a `Multi-Choice` Section-Template, as follows::
 
     curl -u username:password --dump-header - -H "Content-Type:application/json" -X POST --data '{"type": "2", "audiofile": "/rest-api/audio-files/18/", "question": "Multi-choice, select 1 or 2", "survey": "/rest-api/survey-template/29/", "retries": 3, "timeout": 5, "key_1": "1 Pressed", "key_2": "2 Pressed", "order": 1, "queue": null}' http://HOSTNAME_IP/rest-api/section-template/
 
-There is a lot of parameters available, we would advice to inspect them via the API explorer: http://HOSTNAME_IP/rest-api/section-template/
+There are a lot of parameters available, we advise you to inspect them via the API explorer: http://HOSTNAME_IP/rest-api/section-template/
 
-Note here the `retries` & `timeout` was used, along with `key_1` & `key_2` as we want to capture contacts pressing 1 or 2.
+Note here are the `retries` & `timeout` were used, along with `key_1` & `key_2` as we want to capture contacts pressing 1 or 2.
 
 Let's assume that in the API result the `section-template ID` was 75.
 
 
-b) Now, let's create a `Play message` Section-Template, as follows::
+b) Now create a `Play message` Section-Template, as follows::
 
     curl -u username:password --dump-header - -H "Content-Type:application/json" -X POST --data '{"type": "1", "audiofile": "/rest-api/audio-files/20/", "question": "Simple Message", "survey": "/rest-api/survey-template/29/", "order": 2, "queue": null}' http://HOSTNAME_IP/rest-api/section-template/
 
-Let's assume that in the API result the `section-template ID` was 76.
+Assume that in the API result the `section-template ID` was 76.
 
 c) Now, let's create an `API` Section-Template, as follows::
 
@@ -88,17 +88,17 @@ c) Now, let's create an `API` Section-Template, as follows::
 
 Note: We have used `completed` to mark a call as completed when reaching this section, this is not mandatory.
 
-Let's assume that in the API result the `section-template ID` was 77.
+Assume that in the API result the `section-template ID` was 77.
 
 
 2) Create Branching into your Survey Template
 ---------------------------------------------
 
-Branching are used on the multi-choice to tell the IVR to which section to go when pressing a certain key.
+Branching is used on the multi-choice to tell the IVR which section to go to when pressing a certain key.
 
-Let's create 2 branchings for press-1 & press-2.
+Create 2 branchings for press-1 & press-2.
 
-When pressing 1, we want to go to the play message (so it will go from section-template ID 75 to 76)
+When pressing 1, we want to go to the Play Message (so it will go from section-template ID 75 to 76)
 
 Create the branching via API, as follow::
 
@@ -114,4 +114,4 @@ Create the branching via API, as follow::
 3) Closing remark
 -----------------
 
-You can now use this complex IVR with a campaign, remember that a campaign that is started will create a copy of that IVR/Survey, so if you modify it after a campaign is started, you will need to recreate your campaign from the beginning for the changes to take effects.
+You can now use this complex IVR with a campaign, remember that a campaign when it is started will create a copy of that IVR/Survey, so if you modify a survey after a campaign is started, you will need to recreate your campaign from the beginning for the changes to take effect.
