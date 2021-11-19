@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Survey &amp; IVR Configuration &mdash; DialerAI 7.8.6 documentation</title>
+  <title>Survey &amp; IVR Configuration &mdash; DialerAI 7.8.21 documentation</title>
   
 
   
@@ -26,6 +26,7 @@
 
   <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/dialerai.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Contacts" href="contacts.html" />
@@ -276,6 +277,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../advanced-configuration/microsoft-asr.html">Setting up Microsoft Azure Speech-to-Text (ASR)</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../advanced-dev/streaming-callcenter-events.html">Streaming Call-Center Events</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-dev/streaming-callcenter-events.html#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-dev/streaming-callcenter-events.html#pub-sub-redis">Pub/Sub Redis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../advanced-dev/streaming-callcenter-events.html#hiredis">Hiredis</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -483,6 +490,7 @@
 <dt>For example, let’s add this in “Additional Parameters (JSON)”:</dt>
 <dd>{“company_name”: “Canonical”, “bonus” : “200”, “currency” : “euro”}</dd>
 </dl>
+<p>NB: variable names should be lowercase with no spaces, for instance use {first_name} rather than {First Name}.</p>
 <p>When you create a survey with a node that plays TTS, you can easily replace the key-values in the text.
 Text example:</p>
 <blockquote>

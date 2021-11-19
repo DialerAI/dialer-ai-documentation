@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>DID API &mdash; DialerAI 7.8.21 documentation</title>
+  <title>Streaming Call-Center Events &mdash; DialerAI 7.8.21 documentation</title>
   
 
   
@@ -29,8 +29,8 @@
   <link rel="stylesheet" href="../_static/dialerai.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="How to create an IVR/Survey via API" href="how_create_survey_campaign_via_api.html" />
-    <link rel="prev" title="Content Type API" href="content_type_serializers.html" /> 
+    <link rel="next" title="Setting up VoIP Telecoms Carriers" href="../gateway-config.html" />
+    <link rel="prev" title="Setting up Microsoft Azure Speech-to-Text (ASR)" href="../advanced-configuration/microsoft-asr.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -79,7 +79,7 @@
               
             
             
-              <ul>
+              <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../introduction.html">Introduction</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html#overview">Overview</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../introduction.html#utility">Utility</a></li>
@@ -232,7 +232,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../admin-guide.html">Admin Guide</a><ul>
+<li class="toctree-l1 current"><a class="reference internal" href="../admin-guide.html">Admin Guide</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../admin-guide/SMS-config.html">SMS Configuration</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../admin-guide/SMS-config.html#configuration">Configuration</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../admin-guide/SMS-config.html#messages">Messages</a></li>
@@ -277,16 +277,16 @@
 <li class="toctree-l3"><a class="reference internal" href="../advanced-configuration/microsoft-asr.html">Setting up Microsoft Azure Speech-to-Text (ASR)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../advanced-dev/streaming-callcenter-events.html">Streaming Call-Center Events</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../advanced-dev/streaming-callcenter-events.html#overview">Overview</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../advanced-dev/streaming-callcenter-events.html#pub-sub-redis">Pub/Sub Redis</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../advanced-dev/streaming-callcenter-events.html#hiredis">Hiredis</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Streaming Call-Center Events</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pub-sub-redis">Pub/Sub Redis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hiredis">Hiredis</a></li>
 </ul>
 </li>
 </ul>
 </li>
 </ul>
-<ul class="current">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../gateway-config.html">Setting up VoIP Telecoms Carriers</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../gateway-config.html#introduction">Introduction</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gateway-config.html#terms-and-conditions">Terms and Conditions</a></li>
@@ -297,45 +297,45 @@
 <li class="toctree-l2"><a class="reference internal" href="../gateway-config.html#vitelity-inteliquent">Vitelity / Inteliquent</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="../api-reference.html">API Reference</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="contact_serializers.html"><cite>Contact API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="phonebook_serializers.html"><cite>Phonebook API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="campaign_serializers.html"><cite>Campaign API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="cdr_serializers.html"><cite>CDR API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="subscriber_list_serializers.html"><cite>SubscriberList API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="user_serializers.html"><cite>User API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="dnc_serializers.html"><cite>DNC API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="dnc_contact_serializers.html"><cite>DNCContact API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="callerid_serializers.html"><cite>CallerID API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="callerid_group_serializers.html"><cite>CallerID Group API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="gateway_serializers.html"><cite>Gateway API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="callcenter_config_serializers.html"><cite>Callcenter Config API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="queue_serializers.html"><cite>Queue API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="agent_serializers.html"><cite>Agent API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="survey_template_serializers.html"><cite>Survey Template API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="section_template_serializers.html"><cite>SectionTemplateSerializer</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="section_template_serializers.html#section-template-api"><cite>Section Template API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="branching_template_serializers.html"><cite>Branching Template API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="survey_serializers.html"><cite>Survey API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="sms_campaign_serializers.html"><cite>SMS Campaign API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="sms_gateway_serializers.html"><cite>SMSGateway API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="payment_serializers.html"><cite>Payment API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="audiofile_serializers.html"><cite>Audio API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="userprofile_serializers.html"><cite>UserProfile API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="content_type_serializers.html"><cite>Content Type API</cite></a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#"><cite>DID API</cite></a></li>
-<li class="toctree-l2"><a class="reference internal" href="how_create_survey_campaign_via_api.html">How to create an IVR/Survey via API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#upload-audio-via-api">1) Upload audio Via API</a></li>
-<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-survey-template">2) Create a Survey Template</a></li>
-<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-section-into-your-survey-template">3) Create a Section into your Survey Template</a></li>
-<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#create-a-campaign-for-the-previously-created-survey-template">4) Create a campaign for the previously created Survey Template</a></li>
-<li class="toctree-l3"><a class="reference internal" href="how_create_survey_campaign_via_api.html#start-the-campaign-via-api">5) Start the campaign via API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api-reference.html">API Reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/contact_serializers.html"><cite>Contact API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/phonebook_serializers.html"><cite>Phonebook API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/campaign_serializers.html"><cite>Campaign API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/cdr_serializers.html"><cite>CDR API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/subscriber_list_serializers.html"><cite>SubscriberList API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/user_serializers.html"><cite>User API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/dnc_serializers.html"><cite>DNC API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/dnc_contact_serializers.html"><cite>DNCContact API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/callerid_serializers.html"><cite>CallerID API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/callerid_group_serializers.html"><cite>CallerID Group API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/gateway_serializers.html"><cite>Gateway API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/callcenter_config_serializers.html"><cite>Callcenter Config API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/queue_serializers.html"><cite>Queue API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/agent_serializers.html"><cite>Agent API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/survey_template_serializers.html"><cite>Survey Template API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/section_template_serializers.html"><cite>SectionTemplateSerializer</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/section_template_serializers.html#section-template-api"><cite>Section Template API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/branching_template_serializers.html"><cite>Branching Template API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/survey_serializers.html"><cite>Survey API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/sms_campaign_serializers.html"><cite>SMS Campaign API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/sms_gateway_serializers.html"><cite>SMSGateway API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/payment_serializers.html"><cite>Payment API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/audiofile_serializers.html"><cite>Audio API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/userprofile_serializers.html"><cite>UserProfile API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/content_type_serializers.html"><cite>Content Type API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/did_serializers.html"><cite>DID API</cite></a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html">How to create an IVR/Survey via API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html#upload-audio-via-api">1) Upload audio Via API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html#create-a-survey-template">2) Create a Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html#create-a-section-into-your-survey-template">3) Create a Section into your Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html#create-a-campaign-for-the-previously-created-survey-template">4) Create a campaign for the previously created Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api-doc/how_create_survey_campaign_via_api.html#start-the-campaign-via-api">5) Start the campaign via API</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="create_more_complex_ivr_api.html">Create a complex IVR/Survey via API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="create_more_complex_ivr_api.html#create-a-section-into-your-survey-template">1) Create a Section into your Survey Template</a></li>
-<li class="toctree-l3"><a class="reference internal" href="create_more_complex_ivr_api.html#create-branching-into-your-survey-template">2) Create Branching into your Survey Template</a></li>
-<li class="toctree-l3"><a class="reference internal" href="create_more_complex_ivr_api.html#closing-remark">3) Closing remark</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api-doc/create_more_complex_ivr_api.html">Create a complex IVR/Survey via API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api-doc/create_more_complex_ivr_api.html#create-a-section-into-your-survey-template">1) Create a Section into your Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api-doc/create_more_complex_ivr_api.html#create-branching-into-your-survey-template">2) Create Branching into your Survey Template</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api-doc/create_more_complex_ivr_api.html#closing-remark">3) Closing remark</a></li>
 </ul>
 </li>
 </ul>
@@ -390,9 +390,9 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-          <li><a href="../api-reference.html">API Reference</a> &raquo;</li>
+          <li><a href="../admin-guide.html">Admin Guide</a> &raquo;</li>
         
-      <li><cite>DID API</cite></li>
+      <li>Streaming Call-Center Events</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -410,71 +410,60 @@
            <div itemprop="articleBody">
             
 
-    <span class="target" id="module-apirest.did_serializers"></span><div class="section" id="did-api">
-<span id="didserializer-model"></span><h1><cite>DID API</cite><a class="headerlink" href="#did-api" title="Permalink to this headline">¶</a></h1>
-<dl class="data">
-<dt id="apirest.did_serializers.DIDSerializer">
-<code class="descname">DIDSerializer</code><a class="headerlink" href="#apirest.did_serializers.DIDSerializer" title="Permalink to this definition">¶</a></dt>
-<dd><p>DID API to view and create new DIDs.</p>
-<p><strong>Create</strong>:</p>
+    <div class="section" id="streaming-call-center-events">
+<span id="streaming-callcenter-events"></span><h1>Streaming Call-Center Events<a class="headerlink" href="#streaming-call-center-events" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="overview">
+<span id="stream-events-overview"></span><h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>In some situation, you may want to know in realtime what is happening on a call-center queue.</p>
+<p>For the moment those 2 events are published:</p>
 <blockquote>
-<div><p>CURL Usage:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">--</span><span class="n">dump</span><span class="o">-</span><span class="n">header</span> <span class="o">-</span> <span class="o">-</span><span class="n">H</span> <span class="s2">&quot;Content-Type:application/json&quot;</span> <span class="o">-</span><span class="n">X</span> <span class="n">POST</span> <span class="o">--</span><span class="n">data</span> <span class="s1">&#39;{&quot;did_number&quot;: &quot;300112344&quot;, &quot;user&quot;: &quot;/rest-api/users/1/&quot;, &quot;campaign&quot;: &quot;/rest-api/campaigns/94/&quot;}&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">did</span><span class="o">/</span>
-</pre></div>
-</div>
-<p>Response:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.0</span> <span class="mi">201</span> <span class="n">Created</span>
-<span class="n">Date</span><span class="p">:</span> <span class="n">Wed</span><span class="p">,</span> <span class="mi">29</span> <span class="n">Jul</span> <span class="mi">2020</span> <span class="mi">16</span><span class="p">:</span><span class="mi">04</span><span class="p">:</span><span class="mi">58</span> <span class="n">GMT</span>
-<span class="n">Server</span><span class="p">:</span> <span class="n">WSGIServer</span><span class="o">/</span><span class="mf">0.1</span> <span class="n">Python</span><span class="o">/</span><span class="mf">2.7</span><span class="o">.</span><span class="mi">15</span><span class="n">rc1</span>
-<span class="n">Content</span><span class="o">-</span><span class="n">Length</span><span class="p">:</span> <span class="mi">279</span>
-<span class="n">Content</span><span class="o">-</span><span class="n">Language</span><span class="p">:</span> <span class="n">en</span>
-<span class="n">Vary</span><span class="p">:</span> <span class="n">Accept</span><span class="p">,</span> <span class="n">Accept</span><span class="o">-</span><span class="n">Language</span><span class="p">,</span> <span class="n">Cookie</span>
-<span class="n">Location</span><span class="p">:</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="mf">127.0</span><span class="o">.</span><span class="mf">0.1</span><span class="p">:</span><span class="mi">8000</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">did</span><span class="o">/</span><span class="mi">4</span><span class="o">/</span>
-<span class="n">Allow</span><span class="p">:</span> <span class="n">GET</span><span class="p">,</span> <span class="n">POST</span><span class="p">,</span> <span class="n">HEAD</span><span class="p">,</span> <span class="n">OPTIONS</span>
-<span class="n">X</span><span class="o">-</span><span class="n">Frame</span><span class="o">-</span><span class="n">Options</span><span class="p">:</span> <span class="n">SAMEORIGIN</span>
-<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
-
-<span class="p">{</span><span class="s2">&quot;url&quot;</span><span class="p">:</span><span class="s2">&quot;http://127.0.0.1:8000/rest-api/did/4/&quot;</span><span class="p">,</span><span class="s2">&quot;did_number&quot;</span><span class="p">:</span><span class="s2">&quot;300112344&quot;</span><span class="p">,</span><span class="s2">&quot;created_date&quot;</span><span class="p">:</span><span class="s2">&quot;2020-07-29T18:04:57.951292+02:00&quot;</span><span class="p">,</span><span class="s2">&quot;updated_date&quot;</span><span class="p">:</span><span class="s2">&quot;2020-07-29T18:04:57.951354+02:00&quot;</span><span class="p">,</span><span class="s2">&quot;user&quot;</span><span class="p">:</span><span class="s2">&quot;http://127.0.0.1:8000/rest-api/users/1/&quot;</span><span class="p">,</span><span class="s2">&quot;campaign&quot;</span><span class="p">:</span><span class="s2">&quot;http://127.0.0.1:8000/rest-api/campaigns/94/&quot;</span><span class="p">}</span>
-</pre></div>
-</div>
+<div><ul class="simple">
+<li><strong>Offering-Call-Agent:</strong> Contact session being offered to the agent, his phone is ringing.</li>
+<li><strong>Connected-Call-Agent:</strong> Contact session from the queue is being connected to the agent.</li>
+</ul>
 </div></blockquote>
-<p><strong>Read</strong>:</p>
+<p>Event Payload:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;{</span><span class="se">\&#39;</span><span class="s1">Offering-Call-Agent:</span><span class="se">\&#39;</span><span class="s1"> : {</span><span class="se">\&#39;</span><span class="s1">callrequest_id</span><span class="se">\&#39;</span><span class="s1">: </span><span class="se">\&#39;</span><span class="s1">276547</span><span class="se">\&#39;</span><span class="s1">, </span><span class="se">\&#39;</span><span class="s1">CC_Agent</span><span class="se">\&#39;</span><span class="s1">: </span><span class="se">\&#39;</span><span class="s1">tenant-1@areski</span><span class="se">\&#39;</span><span class="s1">, </span><span class="se">\&#39;</span><span class="s1">campaign_id</span><span class="se">\&#39;</span><span class="s1">: </span><span class="se">\&#39;</span><span class="s1">295</span><span class="se">\&#39;</span><span class="s1">, </span><span class="se">\&#39;</span><span class="s1">CC_Member_CID_Name</span><span class="se">\&#39;</span><span class="s1">: </span><span class="se">\&#39;</span><span class="s1">Outbound Call</span><span class="se">\&#39;</span><span class="s1">, </span><span class="se">\&#39;</span><span class="s1">CC_Agent_System</span><span class="se">\&#39;</span><span class="s1">: </span><span class="se">\&#39;</span><span class="s1">single_box</span><span class="se">\&#39;</span><span class="s1">, </span><span class="se">\&#39;</span><span class="s1">phonenumber</span><span class="se">\&#39;</span><span class="s1">: </span><span class="se">\&#39;</span><span class="s1">34650844400</span><span class="se">\&#39;</span><span class="s1">, </span><span class="se">\&#39;</span><span class="s1">callerid_number</span><span class="se">\&#39;</span><span class="s1">: </span><span class="se">\&#39;</span><span class="s1">34650844400</span><span class="se">\&#39;</span><span class="s1">, </span><span class="se">\&#39;</span><span class="s1">CC_Member_Session_UUID</span><span class="se">\&#39;</span><span class="s1">: </span><span class="se">\&#39;</span><span class="s1">4dbd89c2-8e54-43a6-a0b4-a7d26b09ae6c</span><span class="se">\&#39;</span><span class="s1">, </span><span class="se">\&#39;</span><span class="s1">CC_Member_UUID</span><span class="se">\&#39;</span><span class="s1">: </span><span class="se">\&#39;</span><span class="s1">33e7df24-133c-47c1-9aec-b985d507d43e</span><span class="se">\&#39;</span><span class="s1">, </span><span class="se">\&#39;</span><span class="s1">CC_Member_CID_Number</span><span class="se">\&#39;</span><span class="s1">: </span><span class="se">\&#39;</span><span class="s1">34650110022</span><span class="se">\&#39;</span><span class="s1">, </span><span class="se">\&#39;</span><span class="s1">CC_Queue</span><span class="se">\&#39;</span><span class="s1">: </span><span class="se">\&#39;</span><span class="s1">tenant-1@areski-queue</span><span class="se">\&#39;</span><span class="s1">}}&#39;</span>
+</pre></div>
+</div>
+<p>Relevant information in the payload:</p>
 <blockquote>
-<div><p>CURL Usage:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span> <span class="o">-</span><span class="n">u</span> <span class="n">username</span><span class="p">:</span><span class="n">password</span> <span class="o">-</span><span class="n">H</span> <span class="s1">&#39;Accept: application/json&#39;</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">HOSTNAME_IP</span><span class="o">/</span><span class="n">rest</span><span class="o">-</span><span class="n">api</span><span class="o">/</span><span class="n">did</span><span class="o">/</span>
-</pre></div>
-</div>
-<p>Response:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-    <span class="s2">&quot;count&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-    <span class="s2">&quot;next&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-    <span class="s2">&quot;previous&quot;</span><span class="p">:</span> <span class="n">null</span><span class="p">,</span>
-    <span class="s2">&quot;results&quot;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="p">{</span>
-                <span class="s2">&quot;url&quot;</span><span class="p">:</span><span class="s2">&quot;http://127.0.0.1:8000/rest-api/did/1/&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;did_number&quot;</span><span class="p">:</span><span class="s2">&quot;804445454&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;created_date&quot;</span><span class="p">:</span><span class="s2">&quot;2018-09-05T17:13:01.123429+02:00&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;updated_date&quot;</span><span class="p">:</span><span class="s2">&quot;2018-09-05T17:18:48.055658+02:00&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;user&quot;</span><span class="p">:</span><span class="s2">&quot;http://127.0.0.1:8000/rest-api/users/1/&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;campaign&quot;</span><span class="p">:</span><span class="n">null</span>
-
-        <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="s2">&quot;url&quot;</span><span class="p">:</span><span class="s2">&quot;http://127.0.0.1:8000/rest-api/did/2/&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;did_number&quot;</span><span class="p">:</span><span class="s2">&quot;55555555500&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;created_date&quot;</span><span class="p">:</span><span class="s2">&quot;2020-07-29T17:58:01.953773+02:00&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;updated_date&quot;</span><span class="p">:</span><span class="s2">&quot;2020-07-29T17:58:01.953798+02:00&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;user&quot;</span><span class="p">:</span><span class="s2">&quot;http://127.0.0.1:8000/rest-api/users/2/&quot;</span><span class="p">,</span>
-                <span class="s2">&quot;campaign&quot;</span><span class="p">:</span><span class="s2">&quot;http://127.0.0.1:8000/rest-api/campaigns/94/&quot;</span>
-
-        <span class="p">}</span>
-    <span class="p">]</span>
-<span class="p">}</span>
-</pre></div>
-</div>
+<div><ul class="simple">
+<li>callrequest_id: Internal ID to identify the call (provided by webhook too)</li>
+<li>CC_Member_UUID: UUID to identify the call (provided by webhook too)</li>
+<li>campaign_id: ID of the Campaign</li>
+<li>CC_Agent: agent internal name, built as follow <a class="reference external" href="mailto:tenant-%USER_ID&#37;&#52;&#48;%AGENT_USERNAME">tenant-%USER_ID<span>&#64;</span>%AGENT_USERNAME</a></li>
+<li>phonenumber: Contact phone number</li>
+<li>callerid_number: Contact phone number</li>
+<li>agent_internal_name: agent internal name is composed as follow “<a class="reference external" href="mailto:tenant-USERID&#37;&#52;&#48;AGENT_USERNAME">tenant-USERID<span>&#64;</span>AGENT_USERNAME</a>”</li>
+<li>agent_username: username choosed by the agent</li>
+</ul>
 </div></blockquote>
-</dd></dl>
-
+</div>
+<div class="section" id="pub-sub-redis">
+<span id="id1"></span><h2>Pub/Sub Redis<a class="headerlink" href="#pub-sub-redis" title="Permalink to this headline">¶</a></h2>
+<p>Those events can be retrieved using Redis Pub/Sub, thus you can simply subscribe internally to redis and
+listen on <cite>callcenter_events</cite>.</p>
+<p>Code example in Python to subscribe on a channel:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">redis</span>
+<span class="n">redis_con</span> <span class="o">=</span> <span class="n">redis</span><span class="o">.</span><span class="n">Redis</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;localhost&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">6379</span><span class="p">,</span> <span class="n">db</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">redis_ps</span> <span class="o">=</span> <span class="n">redis_con</span><span class="o">.</span><span class="n">pubsub</span><span class="p">()</span>
+<span class="n">redis_ps</span><span class="o">.</span><span class="n">subscribe</span><span class="p">(</span><span class="s1">&#39;callcenter_events&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;Subscribed to callcenter_events...&quot;</span><span class="p">)</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">event</span> <span class="o">=</span> <span class="n">redis_ps</span><span class="o">.</span><span class="n">get_message</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">event</span><span class="p">:</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s2">&quot;the End.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="hiredis">
+<span id="extra-hiredis"></span><h2>Hiredis<a class="headerlink" href="#hiredis" title="Permalink to this headline">¶</a></h2>
+<p>Ignore this part for now:</p>
+<blockquote>
+<div># hiredis_raw default PUBLISH callcenter_events ‘{‘agent-offering’ : {‘callrequest_id’: ‘276547’, ‘CC_Agent’: <a class="reference external" href="mailto:'tenant-1&#37;&#52;&#48;areski">‘tenant-1<span>&#64;</span>areski</a>’, ‘campaign_id’: ‘295’, ‘CC_Member_CID_Name’: ‘Outbound Call’, ‘CC_Agent_System’: ‘single_box’, ‘phonenumber’: ‘34650844400’, ‘callerid_number’: ‘34650844400’, ‘CC_Member_Session_UUID’: ‘4dbd89c2-8e54-43a6-a0b4-a7d26b09ae6c’, ‘CC_Member_UUID’: ‘33e7df24-133c-47c1-9aec-b985d507d43e’, ‘CC_Member_CID_Number’: ‘34650110022’, ‘CC_Queue’: <a class="reference external" href="mailto:'tenant-1&#37;&#52;&#48;areski-queue">‘tenant-1<span>&#64;</span>areski-queue</a>’}}’</div></blockquote>
+</div>
 </div>
 
 
@@ -486,10 +475,10 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="how_create_survey_campaign_via_api.html" class="btn btn-neutral float-right" title="How to create an IVR/Survey via API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../gateway-config.html" class="btn btn-neutral float-right" title="Setting up VoIP Telecoms Carriers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="content_type_serializers.html" class="btn btn-neutral" title="Content Type API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../advanced-configuration/microsoft-asr.html" class="btn btn-neutral" title="Setting up Microsoft Azure Speech-to-Text (ASR)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
